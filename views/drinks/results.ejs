@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+  <h2>Search RESULTS here!</h2>
+  <p>Results:<%= Results.length %></p>
+
+  <% Results.forEach(function(drink,idx) { %>
+
+    <h4><a href="/search/name/<%= drink.RecipeID %>"><%= drink.Title %></a></h4>
+
+  <% }) %>
+
+</div>
+
+
+<% include ../partials/footer %>

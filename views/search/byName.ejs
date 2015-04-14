@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+  <h2>This is the SEARCH ByNAME</h2>
+
+  <form action="/search/name" method="GET">
+    <div class="form-group">
+      <label>Enter the name of a cocktail to learn more</label>
+      <input type="text" class="form-control" name="q" placeholder="Cocktail Name">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+
+
+<% include ../partials/footer %>

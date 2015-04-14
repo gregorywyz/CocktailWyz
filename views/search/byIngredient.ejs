@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+  <h2>This is the SEARCH ByINGREDIENT</h2>
+
+  <form action="/search/ingredients" method="GET">
+    <div class="form-group">
+      <label>Enter the ingredients you have to find possible cocktail recipes</label>
+      <input type="text" class="form-control" name="i" placeholder="List Ingredients">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
+
+
+<% include ../partials/footer %>

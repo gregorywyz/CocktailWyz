@@ -1,0 +1,16 @@
+.el-div-grande {
+  margin-top: 100px;
+}
+
+#main-logo {
+  max-height: 50px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/*.ingredient-row > td {
+  min-width: 100px;
+}*/

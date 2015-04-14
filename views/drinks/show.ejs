@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+<h2>Your Cocktail Here</h2>
+
+<h3><%= Title %></h3>
+
+
+
+<h4>Ingredients</h4>
+
+<table class="table">
+  <% Ingredients.forEach(function(ingredient) { %>
+  <tr>
+    <td><%= ingredient.DisplayQuantity %></td>
+    <td><%= ingredient.Unit %></td>
+    <td><%= ingredient.Name %></td>
+  </tr>
+  <% }); %>
+</table>
+
+<h4>Makes</h4>
+
+<table class="table">
+  <tr>
+    <td><%= YieldNumber %></td>
+    <td><%= YieldUnit %></td>
+  </tr>
+</table>
+
+<h4>Directions</h4>
+<p><%= Instructions %></p>
+<p><%= Subcategory %></p>
+</div>
+
+<% include ../partials/footer %>

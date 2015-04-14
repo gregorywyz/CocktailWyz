@@ -1,0 +1,30 @@
+{
+  "name": "GA_Project_01",
+  "version": "1.0.0",
+  "description": "Cocktail finder and shopping list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gregorywyz/GA_Project_01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregorywyz/GA_Project_01/issues"
+  },
+  "homepage": "https://github.com/gregorywyz/GA_Project_01",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "cheerio": "^0.19.0",
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.55.0",
+    "sequelize": "^2.0.5",
+    "sequelize-cli": "^1.6.0"
+  }
+}
