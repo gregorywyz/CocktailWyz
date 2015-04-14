@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+  <h2>This is Shopping List</h2>
+
+  <ul>
+  <% shopList.forEach(function(drink,idx) { %>
+    <li><%= drink.Title %></li>
+  <% }); %>
+  </ul>
+
+  <ul>
+  <% shopList.forEach(function(drink,idx) { %>
+    <% drink.Ingredients.forEach(function(ingredient,idx) { %>
+      <li><%= ingredient %></li>
+    <% }); %>
+  <% }); %>
+  </ul>
+
+
+</div>
+
+<% include ../partials/footer %>

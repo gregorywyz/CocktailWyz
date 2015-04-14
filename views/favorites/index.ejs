@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+<div class="container text-center">
+  <h2>This is Favorites</h2>
+
+  <ul>
+  <% drinks.forEach(function(drink,idx) { %>
+    <li><%= drink.Title %></li>
+  <% }) %>
+  </ul>
+
+</div>
+
+<% include ../partials/footer %>

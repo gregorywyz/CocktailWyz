@@ -2,7 +2,9 @@
 var express = require('express');
 var request = require('request');
 var bodyParser = require('body-parser');
-var searchCtrl = require('./controllers/search.js')
+var searchCtrl = require('./controllers/search.js');
+var favsCtrl = require('./controllers/favorites.js');
+var shopCtrl = require('./controllers/shopping.js');
 var app = express();
 
 
@@ -11,6 +13,9 @@ app.set("view engine", "ejs");  // tell express to use .ejs files
 app.use(express.static(__dirname + "/public"));  // tell express where static assets are to be served
 app.use(bodyParser.urlencoded({extended: false}));  // use body-parser
 app.use('/search', searchCtrl);
+app.use('/favorites', favsCtrl);
+app.use('/shopping', shopCtrl);
+
 
 // render home page
 app.get('/', function(req,res) {
@@ -18,18 +23,17 @@ app.get('/', function(req,res) {
   // res.send('hello WORLD!!!!')
 });
 
-app.get('/search/byName',function(req,res) {
-  res.render('search/byName');
+
+// set server to listen for
+app.listen(3000, function() {
+  console.log("~~~~~~~~~~ Server started on port 3000 ~~~~~~~~~~");
 });
 
+// MOVED DOWN TUESDAY - set up for bigOven API
 // app.get("/", function(req,res) {
-
-
 //   var drinkList = [];
 //   var query = 'mojito';
 //   var bigOvenUrl = 'http://api.bigoven.com/recipes';
-
-
 //   // set up query for url
 //   var queryData = {
 //     pg:1,
@@ -37,7 +41,6 @@ app.get('/search/byName',function(req,res) {
 //     api_key:'dvx59qENtcYtAr9f0238g7auJai7GeUx',
 //     title_kw:query
 //   };
-
 //   // pass url in as object, change headers to return JSON
 //   request({
 //     url:bigOvenUrl,
@@ -46,7 +49,6 @@ app.get('/search/byName',function(req,res) {
 //       'Accept':'application/json'
 //     }
 //   },function(error,response,data) {
-
 //     if (!error && response.statusCode == 200) {
 //       var searchResults = JSON.parse(data);
 //       searchResults.Results.forEach(function(drink,idx) {
@@ -55,34 +57,13 @@ app.get('/search/byName',function(req,res) {
 //          console.log('recipeID:',drink.RecipeID);
 //          drinkList.push(drink.RecipeID);
 //         }
-
 //       })
 //       // console.log(searchResults.Results[0].Title);
-
 //       console.log('drinkList:',drinkList);
 //       res.send(searchResults);
-
-
 //     };
 //   })
-
-
 // })
-
-
-
-
-
-
-
-
-
-
-
-// set server to listen for
-app.listen(3000, function() {
-  console.log("~~~~~~~~~~ Server started on port 3000 ~~~~~~~~~~");
-});
 
 // MOVED DOWN MONDAY - refactor for new API
 // // var query = 'screwdriver';

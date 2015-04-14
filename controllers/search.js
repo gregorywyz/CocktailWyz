@@ -5,8 +5,14 @@ var request = require('request');
 var router = express.Router();
 
 
+
+router.get('/',function(req,res) {
+  res.render('drinks/index');
+});
+
+
 // render search results page with only categories of 'drinks'
-router.get('/name', function(req,res) {
+router.get('/results', function(req,res) {
 
   var drinkList = [];
   var query = req.query.q;
@@ -53,7 +59,7 @@ router.get('/name', function(req,res) {
 
 
 // render show page with recipe details
-router.get('/name/:id', function(req,res) {
+router.get('/drink/:id', function(req,res) {
 
   var recID = req.params.id;
   // route for details on specific recipe

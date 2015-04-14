@@ -5,6 +5,28 @@
 
 <h3><%= Title %></h3>
 
+<!-- FAVORITES BTN -->
+<form class="form" action="/favorites" method="POST">
+  <button type="submit" class="btn btn-sm"><i class="glyphicon glyphicon-minus">&nbsp;<strong>Favorites</strong></i></button>
+</form>
+
+<form class="form" action="/favorites" method="POST">
+  <input type="hidden" name="RecipeID" value="<%= RecipeID %>">
+  <input type="hidden" name="Title" value="<%= Title %>">
+  <button type="submit" class="btn btn-sm"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Favorites</strong></i></button>
+</form>
+
+<!-- SHOPPING BTN -->
+<form class="form" action="/favorites" method="POST">
+  <button type="submit" class="btn btn-sm"><i class="glyphicon glyphicon-minus">&nbsp;<strong>Shopping List</strong></i></button>
+</form>
+
+<form class="form" action="/shopping" method="POST">
+  <input type="hidden" name="RecipeID" value="<%= RecipeID %>">
+  <input type="hidden" name="Title" value="<%= Title %>">
+  <input type="hidden" name="Ingredients" value="<%= Ingredients.map(function(i) { return i.Name }).join(", ") %>">
+  <button type="submit" class="btn btn-sm"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Shopping List</strong></i></button>
+</form>
 
 
 <h4>Ingredients</h4>
