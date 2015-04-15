@@ -1,9 +1,8 @@
 // ~~~ load node modules  ~~~
-// var db = require("../models");  // require databases
+var db = require("../models");  // require databases
 var express = require('express');
 var request = require('request');
 var router = express.Router();
-
 
 
 router.get('/',function(req,res) {
@@ -73,8 +72,26 @@ router.get('/drink/:id', function(req,res) {
   },function(error,response,data) {
     if (!error && response.statusCode == 200) {
       var recipe = JSON.parse(data);
-      // res.send(recipe);
-      res.render('drinks/show',recipe);
+      // set boolean to toggle fav button
+      db.favorite.find({where: {RecipeID: req.params.id}})
+        .then(function(favorite) {
+          if (favorite !== null) {
+            recipe.fav = true;
+          } else {
+            recipe.fav = false;
+          };
+
+        // set boolean to toggle shop button
+        db.shopping.find({where: {RecipeID: req.params.id}})
+          .then(function(shopping) {
+            if (shopping !== null) {
+              recipe.shop = true;
+            } else {
+              recipe.shop = false;
+            };
+          res.render('drinks/show',recipe);
+          });
+        });
     };
   });
 });

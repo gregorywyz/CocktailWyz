@@ -41,9 +41,44 @@
           <li role="presentation" class="active"><a href="/search">Search</a></li>
           <li role="presentation"><a href="/shopping">Shopping List</a></li>
           <li role="presentation"><a href="/favorites">Favorites</a></li>
-          <li role="presentation"><a href="#">About</a></li>
-          <li role="presentation"><a href="#">Log In</a></li>
+          <li role="presentation"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Logger</button></li>
+          <li role="presentation"><a href="/auth/login">Log In</a></li>
+          <li role="presentation"><a href="/auth/logout">Log Out</a></li>
         </ul>
       </ul>
     </div><!-- /.navbar-collapse -->
+      <% if (user) { %>
+        <p class="login-hello">Hello, <%= user.name %></p>
+      <% } %>
   </nav>   <!-- end of navbar -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <% include alerts %>
+        <h4 class="modal-title" id="myModalLabel">Sign in!</h4>
+      </div>
+      <div class="modal-body">
+
+            <form class="login-modal form" method="post" action="/auth/login">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Enter your e-mail" name="email">
+                <br><br>
+                <label>Password</label>
+                <input type="password" class="form-control" placeholder="Choose a password" name="password">
+                <br><br>
+                <input type="submit" value="log me in" class="btn btn-primary">
+                <button type="button" class="btn btn-info"><a href="/auth/signup">Sign Up</a></button>
+            </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

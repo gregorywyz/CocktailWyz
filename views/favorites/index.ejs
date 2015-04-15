@@ -5,10 +5,12 @@
 
   <ul>
   <% drinks.forEach(function(drink,idx) { %>
-    <li><%= drink.Title %></li>
+    <li><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-sm"><i class="glyphicon glyphicon-trash"></i></a></li>
   <% }) %>
   </ul>
 
 </div>
 
 <% include ../partials/footer %>
+
+

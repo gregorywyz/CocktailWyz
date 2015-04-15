@@ -5,15 +5,13 @@
 
   <ul>
   <% shopList.forEach(function(drink,idx) { %>
-    <li><%= drink.Title %></li>
+    <li><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a><a href="/shopping/<%= drink.RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></li>
   <% }); %>
   </ul>
 
   <ul>
   <% shopList.forEach(function(drink,idx) { %>
-    <% drink.Ingredients.forEach(function(ingredient,idx) { %>
-      <li><%= ingredient %></li>
-    <% }); %>
+    <li><%= drink.Name %></li>
   <% }); %>
   </ul>
 
@@ -21,3 +19,6 @@
 </div>
 
 <% include ../partials/footer %>
+
+
+

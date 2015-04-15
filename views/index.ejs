@@ -1,6 +1,9 @@
 <% include partials/header %>
-
+<% include partials/alerts %>
 <div class="container text-center">
+  <% if (user) { %>
+    <p class="login-hello">Hello, <%= user.name %></p>
+  <% } %>
   <h2>This is the INDEX</h2>
 
   <div class="list-group">
