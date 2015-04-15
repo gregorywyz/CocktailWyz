@@ -7,7 +7,8 @@ var router = express.Router();
 //GET /auth/login
 //display login form
 router.get('/login',function(req,res) {
-    res.render('auth/login');
+  var user = req.getUser();
+  res.render('auth/login',{user:user});
 });
 
 
@@ -53,7 +54,8 @@ router.post('/login',function(req,res) {
 //GET /auth/signup
 //display sign up form
 router.get('/signup',function(req,res) {
-    res.render('auth/signup');
+  var user = req.getUser();
+  res.render('auth/signup',{user:user});
 });
 
 

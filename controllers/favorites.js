@@ -11,6 +11,8 @@ router.get('/', function(req,res) {
   db. favorite.findAll()
     .then(function(fav) {
       var locals = {drinks:fav};
+      var user = req.getUser();
+      locals.user = user;
       res.render('favorites/index',locals);
     });
 });

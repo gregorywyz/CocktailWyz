@@ -6,7 +6,8 @@ var router = express.Router();
 
 
 router.get('/',function(req,res) {
-  res.render('drinks/index');
+  var user = req.getUser();
+  res.render('drinks/index',{user:user});
 });
 
 
@@ -48,7 +49,8 @@ router.get('/results', function(req,res) {
       // console.log(searchResults.Results[0].Title);
       console.log(drinkList.length)
       // res.send(searchResults);
-      res.render('drinks/results',{Results:drinkList});
+      var user = req.getUser();
+      res.render('drinks/results',{Results:drinkList,user:user});
 
     } else {
       res.send('Sorry no cocktails here, try another drink');
@@ -89,6 +91,8 @@ router.get('/drink/:id', function(req,res) {
             } else {
               recipe.shop = false;
             };
+          var user = req.getUser();
+          recipe.user = user;
           res.render('drinks/show',recipe);
           });
         });

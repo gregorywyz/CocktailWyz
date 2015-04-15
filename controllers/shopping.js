@@ -32,6 +32,8 @@ router.get('/', function(req,res) {
       ////////////////////////////////////
       console.log('------LOCALS------',locals.titles);
       // res.send(locals)
+      var user = req.getUser();
+      locals.user = user;
       res.render('shopping/index',locals);
     });
 

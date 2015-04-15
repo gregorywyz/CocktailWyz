@@ -1,5 +1,8 @@
 .login-hello {
-  margin-top: 20px;
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 5px;
 }
 
 .el-div-grande {

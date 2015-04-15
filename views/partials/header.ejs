@@ -22,6 +22,9 @@
         </a>
         <h1 class="navbar-text"><a href="/">Cocktail Wyz</a></h1>
       </div>
+      <% if (user) { %>
+        <p class="navbar-text login-hello">Welcome, <%= user.name %></p>
+      <% } %>
     </div>
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,15 +44,11 @@
           <li role="presentation" class="active"><a href="/search">Search</a></li>
           <li role="presentation"><a href="/shopping">Shopping List</a></li>
           <li role="presentation"><a href="/favorites">Favorites</a></li>
-          <li role="presentation"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Logger</button></li>
-          <li role="presentation"><a href="/auth/login">Log In</a></li>
-          <li role="presentation"><a href="/auth/logout">Log Out</a></li>
+          <li role="presentation" class="<%= user ? 'hidden' : '' %>"><button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">LogIn</button></li>
+          <li role="presentation" class="<%= user ? '' : 'hidden' %>"><button type="button" class="btn btn-danger btn-md"><a href="/auth/logout">LogOut</a></button></li>
         </ul>
       </ul>
     </div><!-- /.navbar-collapse -->
-      <% if (user) { %>
-        <p class="login-hello">Hello, <%= user.name %></p>
-      <% } %>
   </nav>   <!-- end of navbar -->
 
 
