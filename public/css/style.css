@@ -1,5 +1,46 @@
+
+
+/* Main
+********************************************************************************/
+html,
+body {
+  height: 100%;
+}
+
+#el-div-grande {
+  margin-top: 100px;
+  color: #fff;
+  min-height:100%;
+  position:relative;
+}
+
+.home-page,
+.results-page,
+.show-page,
+.favs-page,
+.shop-page {
+    background: rgba(0,0,0,.7);
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 /* Header
 ********************************************************************************/
+
+.the-header {
+  border: none;
+  background: #333;
+}
 
 .login-hello {
   position: absolute;
@@ -9,7 +50,11 @@
 }
 
 #main-logo {
-  max-height: 50px;
+  max-height: 70px;
+  padding: 3px;
+  background: rgb(131, 229, 131);
+  border: 5px solid #000;
+  border-radius: 3px;
 }
 
 
@@ -25,17 +70,16 @@
     white-space: normal;
 }
 
-
-/* Main
+/* Footer
 ********************************************************************************/
 
-.el-div-grande {
-  margin-top: 100px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
+.the-footer {
+  height:60px;   /* Height of the footer */
+  background: #333;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:#6cf;
 }
 
 /* Home Page
@@ -52,18 +96,33 @@ ul {
 /* Search Results Page
 ********************************************************************************/
 
+.results-bkgrnd {
+  background: url('/images/bkgrnd2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 /* Show Page
 ********************************************************************************/
+
+.show-backgrnd {
+  background: url('/images/bkgrnd3.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 
 /* Favorites Page
 ********************************************************************************/
 
+.favs-backgrnd {
+  background: url('/images/bkgrnd4.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 /* Shopping List Page
 ********************************************************************************/
 
-/* Footer
-********************************************************************************/
-
-
+.shop-backgrnd {
+  background: url('/images/bkgrnd1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 
 

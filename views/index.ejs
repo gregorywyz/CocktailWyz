@@ -1,26 +1,39 @@
 <% include partials/header %>
 <% include partials/alerts %>
 <div class="home-backgrnd">
-<div class="container text-center">
+<div class="home-page container text-center">
 
   <h2>This is the INDEX</h2>
 
   <h3>Search</h3>
-    <form action="/search/results" method="GET">
-      <div class="form-group">
-        <label>Enter the name of a cocktail to learn more</label>
-        <input type="text" class="form-control" name="q" placeholder="Cocktail Name">
-      </div>
-      <button type="submit" class="btn btn-primary">Search</button>
-    </form>
+
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
+      <form action="/search/results" method="GET">
+        <div class="form-group">
+          <label>Enter the name of a cocktail to learn more</label>
+          <input type="text" class="form-control" name="q" placeholder="Cocktail Name">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
   <p>Do a search for any cocktail, learn how to create mixes, get inspired with new ideas.</p>
-  <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
-  <h3>Shop</h3>
-  <p>Build a shopping list. Simply search for a cocktail and add it to your list. Never forget an ingredient again!</p>
-  <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
-  <h3>Favorites</h3>
-  <p>Keep track of what you like. Search for a cocktail and store it as a favorite. Then you have your own quick reference.</p>
-  <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
+
+
+  <div class="row">
+    <div class="col-sm-6 hidden-xs">
+      <h3>Shop</h3>
+      <p>Build a shopping list. Simply search for a cocktail and add it to your list. Never forget an ingredient again!</p>
+      <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+    <div class="col-sm-6 hidden-xs">
+      <h3>Favorites</h3>
+      <p>Keep track of what you like. Search for a cocktail and store it as a favorite. Then you have your own quick reference.</p>
+      <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
+    </div>
+  </div>
 
   <div class="pics-div">
     <ul>

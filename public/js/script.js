@@ -122,7 +122,7 @@ $('.favs-page-del-btn').on('click', function(e) {
       url: delURL
     }).done(function(data) {
       console.log('AJAX done, item deleted');// LOG
-      delBtn.closest('li').fadeOut('slow', function() {
+      delBtn.closest('tr').fadeOut('slow', function() {
         $(this).remove();
         // do cool stuff here
       });
