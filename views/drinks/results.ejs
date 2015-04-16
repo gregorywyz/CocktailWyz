@@ -4,20 +4,18 @@
   <h2>Search RESULTS here!</h2>
   <p>Results:<%= Results.length %></p>
 
-<table id="search-results-table" class="display" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% Results.forEach(function(drink,idx) { %>
-    <tr>
-      <td><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
-    </tr>
-    <% }) %>
-  </tbody>
-</table>
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th class="text-center">Search Result:<%= Results.length %></th>
+      </tr>
+      <% Results.forEach(function(drink,idx) { %>
+      <tr>
+        <td><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
+      </tr>
+      <% }) %>
+    </table>
+  </div>
 
 </div>
 

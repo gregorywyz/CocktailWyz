@@ -26,6 +26,21 @@
     </tbody>
   </table>
 
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th class="text-center">Drink</th>
+        <th class="text-center">Remove?</th>
+      </tr>
+      <% drinks.forEach(function(drink,idx) { %>
+      <tr>
+        <td><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
+        <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-sm"><i class="glyphicon glyphicon-trash"></i></a></td>
+      </tr>
+      <% }) %>
+    </table>
+  </div>
+
 </div>
 
 <% include ../partials/footer %>

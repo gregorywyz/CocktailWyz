@@ -25,9 +25,9 @@ app.use(session({
 
 // custom middleware checks which user is logged in
 app.use(function(req,res,next) {
-  // req.session.user = {
-  //   id: 3
-  // }
+  req.session.user = {
+    id: 3
+  }
   req.getUser = function() {
     return req.session.user || false;
   }
@@ -66,7 +66,7 @@ app.get('/', function(req,res) {
   locals.user = user;
 
   Instagram.tags.recent({
-    name: 'mojito',
+    name: 'cocktail',
     complete: function(data){
       locals.pics = data;
       console.log('~~~~~~~~~~~~~~length',data.length); // LOG

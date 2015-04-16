@@ -1,3 +1,6 @@
+/* Header
+********************************************************************************/
+
 .login-hello {
   position: absolute;
   display: block;
@@ -5,18 +8,10 @@
   right: 5px;
 }
 
-.el-div-grande {
-  margin-top: 100px;
-}
-
 #main-logo {
   max-height: 50px;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-}
 
 .pics-div {
   overflow-x: auto;
@@ -25,13 +20,50 @@ ul {
   height: 600px;
 }
 
-/*.pics-div ul{
-    list-style-type:none;
-    white-space:nowrap;
-    overflow-x:auto;
-}*/
-
 .pics-div li{
     display:inline-block;
     white-space: normal;
 }
+
+
+/* Main
+********************************************************************************/
+
+.el-div-grande {
+  margin-top: 100px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Home Page
+********************************************************************************/
+
+.home-backgrnd {
+  background: url('/images/bkgrnd1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Search Page
+********************************************************************************/
+
+/* Search Results Page
+********************************************************************************/
+
+/* Show Page
+********************************************************************************/
+
+/* Favorites Page
+********************************************************************************/
+
+/* Shopping List Page
+********************************************************************************/
+
+/* Footer
+********************************************************************************/
+
+
+
+

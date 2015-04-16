@@ -1,11 +1,18 @@
 <% include partials/header %>
 <% include partials/alerts %>
-<div class="search-backgrnd">
+<div class="home-backgrnd">
 <div class="container text-center">
 
   <h2>This is the INDEX</h2>
 
   <h3>Search</h3>
+    <form action="/search/results" method="GET">
+      <div class="form-group">
+        <label>Enter the name of a cocktail to learn more</label>
+        <input type="text" class="form-control" name="q" placeholder="Cocktail Name">
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
   <p>Do a search for any cocktail, learn how to create mixes, get inspired with new ideas.</p>
   <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
   <h3>Shop</h3>
