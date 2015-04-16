@@ -2,24 +2,36 @@
 
 /* Main
 ********************************************************************************/
+
 html,
 body {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 #el-div-grande {
   margin-top: 100px;
   color: #fff;
-  min-height:100%;
-  position:relative;
+  /*position:relative;*/
+  /*min-height:100%;*/
 }
 
 .home-page,
+.auth-page,
 .results-page,
 .show-page,
 .favs-page,
 .shop-page {
+    /*min-height: 100%;*/
+    /*height: 100%;*/
     background: rgba(0,0,0,.7);
+}
+
+.home-backgrnd,
+.results-backgrnd,
+.show-backgrnd,
+.favs-backgrnd,
+.shop-backgrnd {
+
 }
 
 a {
@@ -62,7 +74,7 @@ ul {
   overflow-x: auto;
   overflow-y: hidden;
   white-space:nowrap;
-  height: 600px;
+  height: 300px;
 }
 
 .pics-div li{
@@ -74,13 +86,14 @@ ul {
 ********************************************************************************/
 
 .the-footer {
+  /*position:absolute;*/
+  /*bottom:0;*/
   height:60px;   /* Height of the footer */
-  background: #333;
-  position:absolute;
-  bottom:0;
   width:100%;
-  background:#6cf;
+  background: #333;
 }
+
+
 
 /* Home Page
 ********************************************************************************/
@@ -90,13 +103,22 @@ ul {
   background-size: cover;
 }
 
-/* Search Page
+.pics-home {
+  max-height: 300px;
+}
+
+/* Login Pages
 ********************************************************************************/
+
+.login-backgrnd {
+  background: url('/images/bkgrnd1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 
 /* Search Results Page
 ********************************************************************************/
 
-.results-bkgrnd {
+.results-backgrnd {
   background: url('/images/bkgrnd2.jpg') no-repeat center center fixed;
   background-size: cover;
 }
@@ -121,7 +143,7 @@ ul {
 ********************************************************************************/
 
 .shop-backgrnd {
-  background: url('/images/bkgrnd1.jpg') no-repeat center center fixed;
+  background: url('/images/bkgrnd5.jpeg') no-repeat center center fixed;
   background-size: cover;
 }
 

@@ -38,7 +38,7 @@
   <div class="pics-div">
     <ul>
     <% pics.forEach(function(pic,idx) { %>
-      <li><a href="<%= pic.link %>" target="_blank"><img src="<%= pic.images.standard_resolution.url %>"></a></li>
+      <li><a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a></li>
     <% }); %>
     </ul>
   </div>
