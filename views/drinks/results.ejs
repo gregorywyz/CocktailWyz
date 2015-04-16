@@ -1,6 +1,13 @@
 <% include ../partials/header %>
 
-<div class="results-backgrnd">
+<style>
+body {
+  background: url('/images/bkgrnd2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+</style>
+
+<!-- <div class="results-backgrnd"> -->
 <div class="results-page container text-center">
   <h2>Search RESULTS here!</h2>
   <p>Results:<%= Results.length %></p>
@@ -21,7 +28,7 @@
     </div>
   </div>
 </div>
-</div>
+<!-- </div> -->
 
 
 <% include ../partials/footer %>
