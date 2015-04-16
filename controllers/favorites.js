@@ -8,10 +8,11 @@ var router = express.Router();
 // READ - reads db and renders favorites page
 router.get('/', function(req,res) {
 
-  db. favorite.findAll()
+  var user = req.getUser();
+
+  db. favorite.findAll({where: {userId: user.id}})
     .then(function(fav) {
       var locals = {drinks:fav};
-      var user = req.getUser();
       locals.user = user;
       res.render('favorites/index',locals);
     });

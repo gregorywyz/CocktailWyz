@@ -3,6 +3,7 @@ var express = require('express');
 var request = require('request');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var Instagram = require('instagram-node-lib');
 var flash = require('connect-flash');
 var searchCtrl = require('./controllers/search.js');
 var favsCtrl = require('./controllers/favorites.js');
@@ -24,6 +25,9 @@ app.use(session({
 
 // custom middleware checks which user is logged in
 app.use(function(req,res,next) {
+  // req.session.user = {
+  //   id: 3
+  // }
   req.getUser = function() {
     return req.session.user || false;
   }
@@ -42,6 +46,10 @@ app.use(function(req,res,next){
   next(); // triggers next middleware
 })
 
+Instagram.set('client_id', process.env.IG_ID);
+Instagram.set('client_secret', process.env.IG_SECRET);
+
+
 
 // ~~~ use controllers ~~~
 app.use('/search', searchCtrl);
@@ -52,8 +60,20 @@ app.use('/auth', authCtrl);
 
 // render home page
 app.get('/', function(req,res) {
+
+  var locals = {};
   var user = req.getUser();
-  res.render('index',{user:user});
+  locals.user = user;
+
+  Instagram.tags.recent({
+    name: 'mojito',
+    complete: function(data){
+      locals.pics = data;
+      console.log('~~~~~~~~~~~~~~length',data.length); // LOG
+      // res.send(locals);
+      res.render('index',locals);
+    }
+  });
 });
 
 

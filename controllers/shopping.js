@@ -4,42 +4,27 @@ var express = require('express');
 var request = require('request');
 var router = express.Router();
 var async = require('async');
+var _ = require('lodash');
 
-////////////// DELETE if not used
-var noRepeats = function(array) {
-  var newArray = [];
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] !== array[i - 1]) {
-      newArray.push(array[i]);
-    }
-  }
-  return newArray
-}
-/////////////////////////////////
+
 
 
 // render shopping list page with drink names and trimmed ingredients
 router.get('/', function(req,res) {
-  db.shopping.findAll()
+
+  var user = req.getUser();
+
+  db.shopping.findAll({where: {userId: user.id}})
     .then(function(ingredients) {
       var locals = {shopList:ingredients};
-      // create array of just drink names
-      locals.titles = [];
-      locals.shopList.forEach(function(item,idx) {
-        locals.titles.push(item.Title);
-      })
-      locals.titles = noRepeats(locals.titles);
-      ////////////////////////////////////
-      console.log('------LOCALS------',locals.titles);
-      // res.send(locals)
-      var user = req.getUser();
       locals.user = user;
+
+      locals.taco = _.groupBy(ingredients, "Title");
+
       res.render('shopping/index',locals);
     });
-
-
-  // res.render('shopping/index',{shopList:arrOfIngredients});
 });
+
 
 // add ingedients to shopping list page
 router.post('/', function(req,res) {

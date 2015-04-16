@@ -25,6 +25,8 @@
     "ejs": "^2.3.1",
     "express": "^4.12.3",
     "express-session": "^1.11.1",
+    "instagram-node-lib": "^0.1.1",
+    "lodash": "^3.6.0",
     "pg": "^4.3.0",
     "pg-hstore": "^2.3.2",
     "request": "^2.55.0",

@@ -9,6 +9,23 @@
   <% }) %>
   </ul>
 
+  <table id="search-results-table" class="display" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Remove?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% drinks.forEach(function(drink,idx) { %>
+      <tr>
+        <td><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
+        <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-sm"><i class="glyphicon glyphicon-trash"></i></a></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
 </div>
 
 <% include ../partials/footer %>

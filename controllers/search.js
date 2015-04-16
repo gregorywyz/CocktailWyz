@@ -61,7 +61,7 @@ router.get('/results', function(req,res) {
 
 // render show page with recipe details
 router.get('/drink/:id', function(req,res) {
-
+  var user = req.getUser();
   var recID = req.params.id;
   // route for details on specific recipe
   var bigOvenUrl2 = 'http://api.bigoven.com/recipe/' + recID + '?api_key=' + process.env.BO_KEY;
@@ -74,8 +74,10 @@ router.get('/drink/:id', function(req,res) {
   },function(error,response,data) {
     if (!error && response.statusCode == 200) {
       var recipe = JSON.parse(data);
+      recipe.user = user;
+
       // set boolean to toggle fav button
-      db.favorite.find({where: {RecipeID: req.params.id}})
+      db.favorite.find({where: {RecipeID: req.params.id, userId: user.id}})
         .then(function(favorite) {
           if (favorite !== null) {
             recipe.fav = true;
@@ -84,15 +86,15 @@ router.get('/drink/:id', function(req,res) {
           };
 
         // set boolean to toggle shop button
-        db.shopping.find({where: {RecipeID: req.params.id}})
+        db.shopping.find({where: {RecipeID: req.params.id, userId: user.id}})
           .then(function(shopping) {
             if (shopping !== null) {
               recipe.shop = true;
             } else {
               recipe.shop = false;
             };
-          var user = req.getUser();
-          recipe.user = user;
+
+
           res.render('drinks/show',recipe);
           });
         });

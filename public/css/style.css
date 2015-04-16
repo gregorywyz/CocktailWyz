@@ -18,6 +18,20 @@ ul {
   padding-left: 0;
 }
 
-/*.ingredient-row > td {
-  min-width: 100px;
+.pics-div {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space:nowrap;
+  height: 600px;
+}
+
+/*.pics-div ul{
+    list-style-type:none;
+    white-space:nowrap;
+    overflow-x:auto;
 }*/
+
+.pics-div li{
+    display:inline-block;
+    white-space: normal;
+}

@@ -4,16 +4,19 @@
   <h2>This is Shopping List</h2>
 
   <ul>
-  <% shopList.forEach(function(drink,idx) { %>
-    <li><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a><a href="/shopping/<%= drink.RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></li>
-  <% }); %>
+  <% for (key in taco) { %>
+    <li>
+      <h4><a href="/search/drink/<%= taco[key][0].RecipeID %>"><%= key %></a>&nbsp;&nbsp;<a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
+      <a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a>
+      <% shopList.forEach(function(drink,idx) { %>
+        <p><%= drink.Name %></p>
+      <% }); %>
+    </li>
+  <% }; %>
   </ul>
 
-  <ul>
-  <% shopList.forEach(function(drink,idx) { %>
-    <li><%= drink.Name %></li>
-  <% }); %>
-  </ul>
+
+
 
 
 </div>

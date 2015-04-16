@@ -1,14 +1,33 @@
 <% include partials/header %>
 <% include partials/alerts %>
+<div class="search-backgrnd">
 <div class="container text-center">
 
   <h2>This is the INDEX</h2>
 
-  <div class="list-group">
-    <a href="/search" class="list-group-item">Search a Cocktail</a>
-    <a href="/shopping" class="list-group-item">Build a Shopping List</a>
-    <a href="/favorites" class="list-group-item">Favorites</a>
+  <h3>Search</h3>
+  <p>Do a search for any cocktail, learn how to create mixes, get inspired with new ideas.</p>
+  <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
+  <h3>Shop</h3>
+  <p>Build a shopping list. Simply search for a cocktail and add it to your list. Never forget an ingredient again!</p>
+  <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
+  <h3>Favorites</h3>
+  <p>Keep track of what you like. Search for a cocktail and store it as a favorite. Then you have your own quick reference.</p>
+  <a href="/search" class="btn btn-primary btn-sm">Get Started</a>
+
+  <div class="pics-div">
+    <ul>
+    <% pics.forEach(function(pic,idx) { %>
+      <li><a href="<%= pic.link %>" target="_blank"><img src="<%= pic.images.standard_resolution.url %>"></a></li>
+    <% }); %>
+    </ul>
   </div>
+
+
+
+
+
+</div>
 </div>
 
 <% include partials/footer %>
