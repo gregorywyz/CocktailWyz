@@ -1,13 +1,63 @@
+/* Colors
+********************************************************************************/
+
+#el-div-grande {
+  color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+.the-header {
+  background: #333;
+}
+
+.the-footer {
+  background: #333;
+}
+
+#main-logo {
+  background: rgb(131, 229, 131);
+  border: 5px solid #000;
+}
+
+#bs-example-navbar-collapse-1 {
+  background: #333;
+}
+
+.login-modal {
+  background: rgba(115,140,115,1);
+}
+
+.login-modal span {
+  color: #fff;
+}
+
+.home-page,
+.auth-page,
+.results-page,
+.show-page,
+.favs-page,
+.shop-page {
+    background: rgba(0,0,0,.7);
+}
+
 
 
 /* Main
 ********************************************************************************/
 
-
-
 #el-div-grande {
   /*margin-top: 100px;*/
-  color: #fff;
   /*position:relative;*/
   /*min-height:100%;*/
 }
@@ -18,11 +68,10 @@
 .show-page,
 .favs-page,
 .shop-page {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     padding-top: 100px;
     min-height: 100%;
     /*min-height: 80vh;*/
-    background: rgba(0,0,0,.7);
 }
 
 
@@ -35,9 +84,6 @@
 
 }
 
-a {
-  color: inherit;
-}
 a:hover {
   text-decoration: none;
 }
@@ -55,12 +101,13 @@ h3 {
   margin-bottom: 20px;
 }
 
+
+
 /* Header
 ********************************************************************************/
 
 .the-header {
   border: none;
-  background: #333;
   height: 100px;
 }
 
@@ -74,25 +121,11 @@ h3 {
 #main-logo {
   max-height: 70px;
   padding: 3px;
-  background: rgb(131, 229, 131);
-  border: 5px solid #000;
   border-radius: 3px;
 }
 
 .hamburger {
   margin-top: -15px;
-}
-
-#bs-example-navbar-collapse-1 {
-  padding: 5px 10px;
-  background: #333;
-}
-
-.login-modal {
-  background: rgba(115,140,115,1);
-}
-.login-modal span {
-  color: #fff;
 }
 
 
@@ -103,9 +136,12 @@ h3 {
 .the-footer {
   /*position:absolute;*/
   /*bottom:0;*/
-  height:60px;   /* Height of the footer */
+  height:40px;   /* Height of the footer */
   width:100%;
-  background: #333;
+}
+
+.the-footer > p {
+  margin: 10px 0;
 }
 
 
@@ -146,6 +182,8 @@ h3 {
 .info-row > div {
   padding: 15px;
 }
+
+
 
 /* Login Pages
 ********************************************************************************/
