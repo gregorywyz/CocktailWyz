@@ -8,16 +8,12 @@
     <li>
       <h4><a href="/search/drink/<%= taco[key][0].RecipeID %>"><%= key %></a>&nbsp;&nbsp;<a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
       <a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a>
-      <% shopList.forEach(function(drink,idx) { %>
-        <p><%= drink.Name %></p>
-      <% }); %>
+      <% for (var i = 0; i < taco[key].length; i++) { %>
+        <p><%= taco[key][i].Name %></p>
+      <% } %>
     </li>
   <% }; %>
   </ul>
-
-
-
-
 
 </div>
 
