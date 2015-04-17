@@ -1,6 +1,11 @@
 /* Colors
 ********************************************************************************/
 
+#alert {
+  width: 80%;
+  margin: 0 auto;
+}
+
 #el-div-grande {
   color: #fff;
 }
@@ -51,6 +56,10 @@ h2 {
     background: rgba(0,0,0,.7);
 }
 
+.pics-home {
+  border: 2px solid white;
+}
+
 
 
 /* Main
@@ -69,20 +78,22 @@ h2 {
 .favs-page,
 .shop-page {
     padding-bottom: 40px;
-    padding-top: 100px;
+    padding-top: 105px;
     min-height: 100%;
+    width: 95%;
+    max-width: 950px;
     /*min-height: 80vh;*/
 }
 
 
 
-.home-backgrnd,
+/*.home-backgrnd,
 .results-backgrnd,
 .show-backgrnd,
 .favs-backgrnd,
 .shop-backgrnd {
 
-}
+}*/
 
 a:hover {
   text-decoration: none;
@@ -98,8 +109,9 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
+
 
 
 
@@ -126,6 +138,11 @@ h3 {
 
 .hamburger {
   margin-top: -15px;
+}
+
+#bs-example-navbar-collapse-1 {
+  padding-right: 10px;
+  padding-bottom: 5px;
 }
 
 
@@ -160,10 +177,12 @@ h3 {
 
 .pics-home {
   max-height: 300px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .pics-div {
-  height: 300px;
+  /*height: 300px;*/
   margin: 20px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -201,6 +220,24 @@ h3 {
   background-size: cover;
 }*/
 
+.results-table {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space:nowrap;
+}
+
+.results-table > p {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.results-table div > table > tbody > tr > td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+}
+
 /* Show Page
 ********************************************************************************/
 
@@ -208,6 +245,25 @@ h3 {
   background: url('/images/bkgrnd3.jpg') no-repeat center center fixed;
   background-size: cover;
 }*/
+
+.btn-row {
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.show-btn {
+  margin: 10px;
+}
+
+.show-details {
+  margin: 30px 0;
+}
+
+.ingredients-table > tbody > tr > td,
+.makes-table > tbody > tr > td {
+  border: none;
+}
+
 
 /* Favorites Page
 ********************************************************************************/
@@ -217,12 +273,46 @@ h3 {
   background-size: cover;
 }*/
 
+.favs-table {
+  margin-top: 40px;
+}
+
+.favs-table > tbody > tr > th {
+  padding-bottom: 20px;
+  border: none;
+}
+
+.favs-table > tbody > tr > td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+}
+
+
 /* Shopping List Page
 ********************************************************************************/
 
 /*.shop-backgrnd {
   background: url('/images/bkgrnd5.jpeg') no-repeat center center fixed;
   background-size: cover;
+}*/
+
+.shopping-list {
+  /*height: 300px;*/
+  margin: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space:nowrap;
+}
+
+.shopping-list li {
+  margin: 20px;
+  display:inline-block;
+  vertical-align: text-top;
+}
+
+/*.shopping-list > ul > li > h4 {
+  display: inline-block;
 }*/
 
 

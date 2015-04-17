@@ -2,7 +2,7 @@
 
 <style>
 body {
-  background: url('/images/bkgrnd5.jpg') no-repeat center center fixed;
+  background: url('/images/bkgrnd5.jpeg') no-repeat center center fixed;
   background-size: cover;
 }
 </style>
@@ -12,17 +12,19 @@ body {
 <div class="shop-page container text-center">
   <h2>This is Shopping List</h2>
 
-  <ul>
-  <% for (key in taco) { %>
-    <li>
-      <h4><a href="/search/drink/<%= taco[key][0].RecipeID %>"><%= key %></a>&nbsp;&nbsp;<a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
-      <a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a>
-      <% for (var i = 0; i < taco[key].length; i++) { %>
-        <p><%= taco[key][i].Name %></p>
-      <% } %>
-    </li>
-  <% }; %>
-  </ul>
+  <div class="shopping-list">
+    <ul>
+    <% for (key in taco) { %>
+      <li>
+        <h4><a href="/search/drink/<%= taco[key][0].RecipeID %>"><%= key %></a>&nbsp;&nbsp;<a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
+        <hr>
+        <% for (var i = 0; i < taco[key].length; i++) { %>
+          <p><%= taco[key][i].Name %></p>
+        <% } %>
+      </li>
+    <% }; %>
+    </ul>
+  </div>
 
 </div>
 <!-- </div> -->

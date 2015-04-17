@@ -11,18 +11,24 @@ body {
 
 <!-- <div class="login-backgrnd"> -->
 <div class="auth-page container text-center">
-  <h2>This is LOGIN</h2>
+  <h2>Welcome Back!</h2>
 
-  <div class="col-md-offset-3 col-md-6">
-    <h1>Log in!</h1>
+  <div class="col-md-offset-3 col-md-6 text-left">
+    <h3>Log In Here</h3>
     <hr>
     <form class="form" method="post" action="/auth/login">
-        <input type="email" class="form-control" placeholder="Enter your e-mail" name="email">
-        <br><br>
-        <input type="password" class="form-control" placeholder="Choose a password" name="password">
-        <br><br>
-        <input type="submit" value="log me in" class="btn btn-primary">
+      <label>Email</label>
+      <input type="email" class="form-control" placeholder="Enter your e-mail" name="email">
+      <br><br>
+      <label>Password</label>
+      <input type="password" class="form-control" placeholder="Enter your password" name="password">
+      <br><br>
+      <div class="text-center">
+        <input type="submit" value="Log In" class="btn btn-primary">
+        <a href="/auth/signup"><button type="button" class="btn btn-info">Sign Up</button></a>
+      </div>
     </form>
+    <hr>
 </div>
 
 </div>

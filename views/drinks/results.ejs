@@ -9,24 +9,22 @@ body {
 
 <!-- <div class="results-backgrnd"> -->
 <div class="results-page container text-center">
-  <h2>Search RESULTS here!</h2>
-  <p>Results:<%= Results.length %></p>
-  <div class="row">
+  <h2>Pick Your Poison</h2>
+  <div class="results-table row">
+    <p><%= Results.length %>&nbsp;Results:</p>
     <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
-      <div class="table-responsive">
+
         <table class="table">
-          <tr>
-            <th class="text-center">Search Result:<%= Results.length %></th>
-          </tr>
           <% Results.forEach(function(drink,idx) { %>
           <tr>
             <td><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
           </tr>
           <% }) %>
         </table>
-      </div>
+
     </div>
   </div>
+
 </div>
 <!-- </div> -->
 
