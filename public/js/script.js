@@ -26,11 +26,11 @@ $(function() {
 /*  ASYNC ADD BUTTON HERE
 ***************************************************************************/
 
-// POST - AJAX call add drink to favs
-$('.favs-add-btn').on('submit', function(e) {
+// CREATE - AJAX call adds drink to favs model
+$('.favs-add-btn').on('submit', function(e) {  // when  + add btn clicked
   e.preventDefault();
   var addBtn = $(this);
-  var addURL = $(this).attr('action');
+  var addURL = $(this).attr('action'); // form action -> /favorites
   var drinkData = $(this).serialize();
 
   $.ajax({
@@ -40,27 +40,23 @@ $('.favs-add-btn').on('submit', function(e) {
   }).done(function() {
     addBtn.addClass('hidden');
     $('.favs-del-btn').removeClass('hidden');
-    // do cool stuff here
   });
 });
 
-// POST - AJAX call add drink to shopping list
-$('.shop-add-btn').on('submit', function(e) {
+// CREATE - AJAX call adds drink to shop model
+$('.shop-add-btn').on('submit', function(e) {  // when  - add btn clicked
   e.preventDefault();
   var addBtn = $(this);
-  var addURL = $(this).attr('action');
+  var addURL = $(this).attr('action');  // form action -> /shopping
   var drinkData = $(this).serialize();
-  console.log('clicked add to shopping list button');
 
   $.ajax({
     method: 'POST',
     url: addURL,
     data: drinkData
   }).done(function() {
-    console.log('done with AJAX call for shopping list');
     addBtn.addClass('hidden');
     $('.shop-del-btn').removeClass('hidden');
-    // do cool stuff here
   });
 });
 
@@ -68,73 +64,64 @@ $('.shop-add-btn').on('submit', function(e) {
 /*  ASYNC DELETE BUTTON HERE
 ***************************************************************************/
 
-// DELETE - AJAX call remove of drink from favs - show page
+// DELETE - AJAX call deletes drink from favs model - show page btn
 $('.favs-del-btn').on('submit', function(e) {
   e.preventDefault();
   var delBtn = $(this);
-  console.log('Clicked and ready to delete');// LOG
 
-  if (confirm('You will remove this drink from your favorites?')) {
-    var delURL = $(this).attr('action');
+  if (confirm('You will remove this drink from your favorites?')) { // JS alert for confirm
+    var delURL = $(this).attr('action'); // form action -> /shopping/:id
+
     $.ajax({
       method: 'DELETE',
       url: delURL
     }).done(function(data) {
-      console.log('AJAX done, item deleted');// LOG
       delBtn.addClass('hidden');
       $('.favs-add-btn').removeClass('hidden');
-      // do cool stuff here
     });
   };
 });
 
-// DELETE - AJAX call remove of drink from shopping - show page
+// DELETE - AJAX call deletes drink from shop model - show page btn
 $('.shop-del-btn').on('submit', function(e) {
   e.preventDefault();
   var delBtn = $(this);
-  console.log('Clicked and ready to delete');// LOG
 
   if (confirm('You will remove this drink from your shopping list?')) {
-    var delURL = $(this).attr('action');
-    console.log('delURL',delURL); // LOG
+    var delURL = $(this).attr('action');  // form action -> /shopping/:id
+
     $.ajax({
       method: 'DELETE',
       url: delURL
     }).done(function(data) {
-      console.log('AJAX done, item deleted');// LOG
       delBtn.addClass('hidden');
       $('.shop-add-btn').removeClass('hidden');
-      // do cool stuff here
     });
   };
 });
 
-// DELETE - AJAX call remove of drink from favs - favs page
+// DELETE - AJAX call deletes drink from favs model - favs page btn
 $('.favs-page-del-btn').on('click', function(e) {
   e.preventDefault();
   var delBtn = $(this);
-  console.log('Clicked and ready to delete');// LOG
 
   if (confirm('You will remove this drink from your favorites?')) {
-    var delURL = $(this).attr('href');
+    var delURL = $(this).attr('href');  // form action -> /favorites/:id
     $.ajax({
       method: 'DELETE',
       url: delURL
     }).done(function(data) {
-      console.log('AJAX done, item deleted');// LOG
       delBtn.closest('tr').fadeOut('slow', function() {
         $(this).remove();
-        // do cool stuff here
       });
     });
   };
 });
 
-// DELETE - AJAX call remove of drink from shopping - shopping page
+// DELETE - AJAX call removes of drink from shop model - shopping page btn
 $('.shop-page-del-btn').on('click', function(e) {
   e.preventDefault();
   var delBtn = $(this);
-  console.log('Clicked and ready to delete');// LOG
 
   if (confirm('You will remove this drink from your shopping list?')) {
     var delURL = $(this).attr('href');
@@ -142,16 +129,13 @@ $('.shop-page-del-btn').on('click', function(e) {
       method: 'DELETE',
       url: delURL
     }).done(function(data) {
-      console.log('AJAX done, item deleted');// LOG
+
       delBtn.closest('li').fadeOut('slow', function() {
         $(this).remove();
-        // do cool stuff here
       });
     });
   };
 });
-
-
 
 
 

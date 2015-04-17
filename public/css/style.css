@@ -183,7 +183,7 @@ h3 {
 
 .pics-div {
   /*height: 300px;*/
-  margin: 20px;
+  margin: 20px 5px;
   overflow-x: auto;
   overflow-y: hidden;
   white-space:nowrap;

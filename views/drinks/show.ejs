@@ -36,6 +36,7 @@ body {
     <form class="shop-add-btn show-btn form <%= shop ? ' hidden' : '' %>" action="/shopping" method="POST">
       <input type="hidden" name="RecipeID" value="<%= RecipeID %>">
       <input type="hidden" name="Title" value="<%= Title %>">
+      <!-- magic here to pass the ingredients -->
       <input type="hidden" name="Ingredients" value="<%= Ingredients.map(function(i) { return i.Name }).join(", ") %>">
       <button type="submit" class="btn btn-primary btn-md"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Shopping List</strong></i></button>
     </form>

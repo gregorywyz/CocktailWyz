@@ -4,8 +4,7 @@ var bcrypt = require('bcrypt');
 var router = express.Router();
 
 
-//GET /auth/login
-//display login form
+// GET - render login page
 router.get('/login',function(req,res) {
   var user = req.getUser();
   res.render('auth/login',{user:user});
@@ -18,11 +17,12 @@ router.post('/login',function(req,res) {
   db.user.find({where: {email: req.body.email}})
     .then(function(user) {
       if (user) {
-        //check password
+        //check password with bcrypt
         bcrypt.compare(req.body.password, user.password, function(err,result) {
           if (err) throw err;
 
           if (result) {
+
             //store user to session
             req.session.user = {
               id: user.id,
@@ -31,36 +31,29 @@ router.post('/login',function(req,res) {
             };
             req.flash('success','You have been logged in.');
             res.redirect('/');
-            // res.send({result:true})
+
           } else {
             req.flash('danger','Invalid password.');
             res.redirect('/auth/login');
-            // res.send({result:true})
+
           }
         })
       } else {
         req.flash('danger','Unknown user. Please sign up.');
         res.redirect('/auth/signup');
-        // res.send({result:true})
-      }
-    })
+      };
+    });
+});
 
 
-
-
-})
-
-
-//GET /auth/signup
-//display sign up form
+// GET - render sign up page
 router.get('/signup',function(req,res) {
   var user = req.getUser();
   res.render('auth/signup',{user:user});
 });
 
 
-//POST /auth/signup
-//create new user in database
+// CREATE - add new user to db
 router.post('/signup', function(req,res) {
 
   var userQuery = {email: req.body.email};
@@ -94,15 +87,11 @@ router.post('/signup', function(req,res) {
         console.log('error, but no error...');
       }
       res.redirect('/auth/signup');
-    })
-
-
-
+    });
 });
 
 
-//GET /auth/logout
-//logout logged in user
+// GET - logs out user
 router.get('/logout',function(req,res){
     delete req.session.user;
     req.flash('info','You have been logged out.')

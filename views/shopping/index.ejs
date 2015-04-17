@@ -2,7 +2,7 @@
 
 <style>
 body {
-  background: url('/images/bkgrnd5.jpeg') no-repeat center center fixed;
+  background: url('/images/bkgrnd8.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 </style>
@@ -16,7 +16,7 @@ body {
     <ul>
     <% for (key in taco) { %>
       <li>
-        <h4><a href="/search/drink/<%= taco[key][0].RecipeID %>"><%= key %></a>&nbsp;&nbsp;<a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
+        <h4><a href="/search/drink/<%= taco[key][0].RecipeID %>"><%= taco[key][0].Title %></a>&nbsp;&nbsp;<a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
         <hr>
         <% for (var i = 0; i < taco[key].length; i++) { %>
           <p><%= taco[key][i].Name %></p>
