@@ -13,13 +13,24 @@
 a {
   color: inherit;
 }
+a:hover {
+  color: #FF9966;
+}
 
-h1 {
-
+h1 a {
+  color: rgb(131, 229, 131);
 }
 
 h2 {
 
+}
+
+h3 {
+  color: #CCFFFF;
+}
+
+h4 {
+  color: #FF9966;
 }
 
 .the-header {
@@ -60,6 +71,13 @@ h2 {
   border: 2px solid white;
 }
 
+.favs-page-del-btn:hover {
+  color: red;
+}
+
+.shop-page-del-btn:hover {
+  color: red;
+}
 
 
 /* Main
@@ -69,6 +87,8 @@ h2 {
   /*margin-top: 100px;*/
   /*position:relative;*/
   /*min-height:100%;*/
+  font-family: 'PT Sans', Helvetica;
+  font-size: 16px;
 }
 
 .home-page,
@@ -104,14 +124,25 @@ ul {
   padding-left: 0;
 }
 
+h1 {
+  font-family: 'Righteous', Helvetica;
+}
+
 h2 {
   margin-top: 40px;
+  font-size: 2.3em;
 }
 
 h3 {
   margin-bottom: 40px;
+  font-family: 'Righteous', Helvetica;
+  font-size: 3em;
 }
 
+h4 {
+  font-weight: 700;
+  font-size: 1.7em;
+}
 
 
 
@@ -238,6 +269,11 @@ h3 {
   border: none;
 }
 
+.search-result {
+  font-size: 1.8em;
+}
+
+
 /* Show Page
 ********************************************************************************/
 
@@ -286,6 +322,10 @@ h3 {
   padding-top: 15px;
   padding-bottom: 15px;
   border: none;
+}
+
+.fav-result {
+  font-size: 1.8em;
 }
 
 

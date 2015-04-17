@@ -2,6 +2,7 @@
 var db = require("../models");
 var express = require('express');
 var request = require('request');
+var Instagram = require('instagram-node-lib');
 var router = express.Router();
 
 
@@ -37,18 +38,30 @@ router.get('/results', function(req,res) {
       var searchResults = JSON.parse(data);
 
       searchResults.Results.forEach(function(drink,idx) {
-        if (drink.Category === 'Drinks') {  // set API to only return drinks
+        if (drink.Category === 'Drinks') {  // set API to only return drinks only
           drinkList.push(drink);  // array of drink objects
         };
       });
       console.log('~~~~~~~~~~~~~~~ Found Drinks:',drinkList.length)
 
-      res.render('drinks/results',{Results:drinkList,user:user});
+      var instaArray = ['cocktail','whiskeysour','gimlet','margaritaontherocks','whiskeyginger','caipirinhas'];
+      Instagram.tags.recent({
+        name: instaArray[Math.floor(Math.random() * (instaArray.length))],  // tag name
+        complete: function(data){
+          var picsArray = data; // array of pics
+
+          res.render('drinks/results',{Results:drinkList,user:user,pics:picsArray});
+        }
+      });
+
+      // res.render('drinks/results',{Results:drinkList,user:user});
     } else {
       res.send('Sorry no cocktails here, try another drink');
     };
   });
 });
+
+
 
 
 // READ - render show page with results from API

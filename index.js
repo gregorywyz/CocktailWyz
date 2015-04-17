@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
 var Instagram = require('instagram-node-lib');
-// ~~~ load node modules  ~~~
+// ~~~ load controllers  ~~~
 var searchCtrl = require('./controllers/search.js');
 var favsCtrl = require('./controllers/favorites.js');
 var shopCtrl = require('./controllers/shopping.js');
@@ -62,13 +62,14 @@ app.use('/auth', authCtrl);
 
 // render home page
 app.get('/', function(req,res) {
+  var user = req.getUser();
 
   var locals = {};
-  var user = req.getUser();
   locals.user = user;
 
+  var instaArray = ['cocktail','whiskeysour','gimlet','margaritaontherocks','whiskeyginger','caipirinhas'];
   Instagram.tags.recent({
-    name: 'cocktail',
+    name: instaArray[Math.floor(Math.random() * (instaArray.length))] ,
     complete: function(data){
       locals.pics = data;
       console.log('~~~~~~~~~~~~~~length',data.length); // LOG

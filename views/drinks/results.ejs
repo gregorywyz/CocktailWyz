@@ -10,19 +10,27 @@ body {
 <!-- <div class="results-backgrnd"> -->
 <div class="results-page container text-center">
   <h2>Pick Your Poison</h2>
+  <p><%= Results.length %>&nbsp;Results:</p>
   <div class="results-table row">
-    <p><%= Results.length %>&nbsp;Results:</p>
     <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
 
         <table class="table">
           <% Results.forEach(function(drink,idx) { %>
           <tr>
-            <td><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
+            <td class="search-result"><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
           </tr>
           <% }) %>
         </table>
 
     </div>
+  </div>
+
+   <div class="pics-div">
+    <ul>
+    <% pics.forEach(function(pic,idx) { %>
+      <li><a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a></li>
+    <% }); %>
+    </ul>
   </div>
 
 </div>
