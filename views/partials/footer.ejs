@@ -1,12 +1,64 @@
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content login-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="contactModalLabel">Contact</h4>
+      </div>
+      <div class="modal-body">
+
+        <img src="#">
+        <h4>Greg Wyszynski</h4>
+        <p>I am a student in web development at General Assembly, Seattle. I will be graduating in June and available for work then. Please feel free to contact me with any networking or work opportunities.</p>
+        <h5>Links:</h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/gregwyszynski85" target="_blank">Greg's Linked In</a></li>
+          <li><a href="https://github.com/gregorywyz" target="_blank">Greg's GitHub</a></li>
+          <li><a href="https://generalassemb.ly/" target="_blank">General Assembly</a></li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content login-modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="aboutModalLabel">About</h4>
+      </div>
+      <div class="modal-body">
+
+        <p>The Cocktail Wyz was designed and built by Greg Wyszynski as a project for General Assembly's Web Development Immersive program. A user has the ability to look up drink recipes via a keyword search. Creating an acount allows the user to save drink recipes to a favorites list and build a simple shopping list of the ingredients needed to make a desired drink. The app is built on the Node.js platform. The data comes from the <a href="http://api.bigoven.com/" target="_blank">BigOven API</a>. Bootstrap is also being used to style the app.</p>
+        <p>Enjoy the app, and drink safely!</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="the-footer text-center navbar-fixed-bottom">
 
     <ul>
-      <li><a href="/about">About</a></li>
+      <li><a type="button" data-toggle="modal" data-target="#aboutModal">About</a></li>
       <li>|</li>
       <li>&copy; 2015 Gregory Wyz</li>
       <li>|</li>
-      <li><a href="/contact">Contact</a></li>
+      <!-- Button trigger modal -->
+      <li><a type="button" data-toggle="modal" data-target="#contactModal">Contact</a></li>
     </ul>
+
+
 
 
   </div>

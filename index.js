@@ -27,9 +27,11 @@ app.use(session({
 
 // custom middleware checks which user is logged in
 app.use(function(req,res,next) {
-  // req.session.user = {  // auto login for user
-  //   id: 3
-  // }
+
+  req.session.user = {  // auto login for user
+    id: 3
+  }
+
   req.getUser = function() {
     return req.session.user || false;
   }
@@ -79,20 +81,9 @@ app.get('/', function(req,res) {
   });
 });
 
-// render contact page
-app.get('/contact', function(req,res) {
-  var user = req.getUser();
-  var locals = {};
-  locals.user = user;
-  res.render('contact/index',locals);
-});
-
-// render about page
-app.get('/about', function(req,res) {
-  var user = req.getUser();
-  var locals = {};
-  locals.user = user;
-  res.render('about/index',locals);
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res){
+  res.send('That URL does not exist, please try again.', 404);
 });
 
 
