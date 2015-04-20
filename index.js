@@ -79,6 +79,22 @@ app.get('/', function(req,res) {
   });
 });
 
+// render contact page
+app.get('/contact', function(req,res) {
+  var user = req.getUser();
+  var locals = {};
+  locals.user = user;
+  res.render('contact/index',locals);
+});
+
+// render about page
+app.get('/about', function(req,res) {
+  var user = req.getUser();
+  var locals = {};
+  locals.user = user;
+  res.render('about/index',locals);
+});
+
 
 // set server to listen for
 app.listen(process.env.PORT || 3000, function() {

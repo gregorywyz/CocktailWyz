@@ -63,7 +63,9 @@ h4 {
 .results-page,
 .show-page,
 .favs-page,
-.shop-page {
+.shop-page,
+.contact-page,
+.about-page {
     background: rgba(0,0,0,.7);
 }
 
@@ -96,7 +98,9 @@ h4 {
 .results-page,
 .show-page,
 .favs-page,
-.shop-page {
+.shop-page,
+.contact-page,
+.about-page {
     padding-bottom: 40px;
     padding-top: 105px;
     min-height: 100%;
@@ -188,13 +192,20 @@ h4 {
 .the-footer {
   /*position:absolute;*/
   /*bottom:0;*/
-  height:40px;   /* Height of the footer */
+  height:50px;   /* Height of the footer */
   width:100%;
 }
 
-.the-footer > p {
-  margin: 10px 0;
+.the-footer > ul {
+  margin-top: 14px;
 }
+
+.the-footer > ul > li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+
 
 
 
