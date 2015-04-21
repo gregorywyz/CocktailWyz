@@ -25,6 +25,9 @@ app.use(session({
   saveUninitialized: true
 }));
 
+
+
+
 // custom middleware checks which user is logged in
 app.use(function(req,res,next) {
 
@@ -53,6 +56,11 @@ app.use(function(req,res,next){
 Instagram.set('client_id', process.env.IG_ID);
 Instagram.set('client_secret', process.env.IG_SECRET);
 
+// 404 errors
+// app.use(function(req, res, next){
+//     res.status(404).send('no no no');
+// });
+
 
 
 // ~~~ use controllers ~~~
@@ -76,15 +84,28 @@ app.get('/', function(req,res) {
       locals.pics = data;
       console.log('~~~~~~~~~~~~~~length',data.length); // LOG
       // res.send(locals);
+      // res.send(res.status(404))
       res.render('index',locals);
     }
   });
 });
 
-//The 404 Route (ALWAYS Keep this as the last route)
-app.get('*', function(req, res){
-  res.send('That URL does not exist, please try again.', 404);
+// middleware for 500
+app.use(function(err,req,res,next) {
+  // console.error(err.stack);
+  res.status(500).send('500 error caught!');
+  next();
 });
+
+// middleware for 404
+app.use(function(req,res,next) {
+  res.status(404).send('404 error caught!');
+})
+
+// //The 404 Route (ALWAYS Keep this as the last route)
+// app.get('*', function(req, res){
+//   res.send('That URL does not exist, please try again.', 404);
+// });
 
 
 // set server to listen for
