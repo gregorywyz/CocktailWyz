@@ -12,7 +12,9 @@ router.get('/results', function(req,res) {
   var user = req.getUser();
   var drinkList = [];
   var query = req.query.q;  // search text from form
-  if (!query) {res.send('you need to enter something')}; // for blank search term
+  if (!query) {
+    req.flash('danger','Please enter a search term.');
+  }; // for blank search term
 
   // BigOven API route for recipes search
   var bigOvenUrl = 'http://api.bigoven.com/recipes';
@@ -44,7 +46,10 @@ router.get('/results', function(req,res) {
         };
       });
       console.log('~~~~~~~~~~~~~~~ Found Drinks:',drinkList.length)
-      if (drinkList.length == 0) {res.send('Sorry, our records show that drink does not exist')}; // for 0 search results
+      if (drinkList.length == 0) {
+        req.flash('danger','Sorry that drink does not exist.');
+        res.redirect('/');
+      }; // for empty search results
 
       var instaArray = ['cocktail','whiskeysour','gimlet','margaritaontherocks','whiskeyginger','caipirinhas'];
       Instagram.tags.recent({
@@ -58,7 +63,8 @@ router.get('/results', function(req,res) {
 
       // res.render('drinks/results',{Results:drinkList,user:user});
     } else {
-      res.send('Sorry no cocktails here, try another drink');
+      res.flash('danger','Sorry, We experienced an error.');
+      res.redirect('/');
     };
   });
 });
