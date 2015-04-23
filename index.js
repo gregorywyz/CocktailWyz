@@ -99,7 +99,8 @@ app.use(function(err,req,res,next) {
 
 // middleware for 404
 app.use(function(req,res,next) {
-  res.status(404).send('404 error caught!');
+  req.flash('danger','Oops! 404 error caught, please try again.');
+  res.redirect('/');
 })
 
 // //The 404 Route (ALWAYS Keep this as the last route)
