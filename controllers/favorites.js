@@ -1,6 +1,5 @@
 var db = require("../models");
 var express = require('express');
-// var request = require('request'); // remove or replace when sure
 var router = express.Router();
 
 

@@ -14,12 +14,12 @@ body {
 
   <div class="shopping-list">
     <ul>
-    <% for (key in taco) { %>
+    <% for (key in groupedIngredients) { %>
       <li>
-        <h4><a href="/search/drink/<%= taco[key][0].RecipeID %>"><%= taco[key][0].Title %></a>&nbsp;&nbsp;<a href="/shopping/<%= taco[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
+        <h4><a href="/search/drink/<%= groupedIngredients[key][0].RecipeID %>"><%= groupedIngredients[key][0].Title %></a>&nbsp;&nbsp;<a href="/shopping/<%= groupedIngredients[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
         <hr>
-        <% for (var i = 0; i < taco[key].length; i++) { %>
-          <p><%= taco[key][i].Name %></p>
+        <% for (var i = 0; i < groupedIngredients[key].length; i++) { %>
+          <p><%= groupedIngredients[key][i].Name %></p>
         <% } %>
       </li>
     <% }; %>
