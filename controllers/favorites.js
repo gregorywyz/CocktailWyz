@@ -1,7 +1,6 @@
-// ~~~ load node modules  ~~~
-var db = require("../models");  // require databases
+var db = require("../models");
 var express = require('express');
-var request = require('request');
+// var request = require('request'); // remove or replace when sure
 var router = express.Router();
 
 
@@ -9,7 +8,7 @@ var router = express.Router();
 router.get('/', function(req,res) {
   var user = req.getUser();
 
-  db. favorite.findAll({where: {userId: user.id}})
+  db.favorite.findAll({where: {userId: user.id}})
     .then(function(fav) {
       var locals = {drinks:fav};
       locals.user = user;
@@ -35,16 +34,12 @@ router.post('/', function(req,res) {
 
 // DESTROY - AJAX remove drink from favs db
 router.delete('/:id', function(req,res) {
-  console.log('Waiting to DELETE: favDrink',req.params.id);// LOG
+
   db.favorite.destroy({where: {RecipeID: req.params.id}})
     .then(function() {
-      console.log('DELETED backside: favDrink',req.params.id);// LOG
       res.send({result:true});
     });
 });
-
-
-
 
 
 module.exports = router;
