@@ -18,7 +18,7 @@
 <body>
 <div id="el-div-grande">
 
-  <nav class="the-header navbar navbar-default navbar-fixed-top">  <!-- start of navbar -->
+  <nav class="the-header navbar navbar-default ">  <!-- start of navbar -->
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="/">
@@ -52,8 +52,52 @@
         </ul>
       <!-- </ul> -->
     </div><!-- /.navbar-collapse -->
-        <% include alerts %>
   </nav>   <!-- end of navbar -->
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="main-logo" class="navbar-brand" href="/"><img style="max-width:30px;" alt="Brand" src="/images/martini_2.png"></a>
+      <p class="navbar-text"><a href="/">The Cocktail Wyz</a></p>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+<!--       <ul class="nav navbar-nav">
+        <li class="active"><a href="#">The Cocktail Wyz</a></li>
+        <li><a href="#">Link</a></li>
+      </ul> -->
+<!--       <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Search</a></li>
+        <li class="<%= user ? '' : ' hidden' %>"><a href="/shopping">Shopping List</a></li>
+        <li class="<%= user ? '' : ' hidden' %>"><a href="/favorites">Favorites</a></li>
+        <li class="<%= user ? 'hidden' : '' %>"><button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#loginModal">LogIn</button></li>
+        <li class="<%= user ? '' : 'hidden' %>"><a href="/auth/logout">LogOut</a></li>
+<!--         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li> -->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
 
 <% include ../partials/alerts.ejs %>
 

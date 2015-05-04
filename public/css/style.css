@@ -165,12 +165,9 @@ h4 {
   right: 5px;
 }
 
-.navbar-text {
-  padding-left: 100px;
-}
-
 #main-logo {
-  max-height: 70px;
+  max-height: 50px;
+  /*max-width: 40px;*/
   padding: 3px;
   border-radius: 3px;
 }
