@@ -79,7 +79,7 @@ h4 {
 .shop-page,
 .contact-page,
 .about-page {
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,.8);
 }
 
 .pics-home {
@@ -90,6 +90,9 @@ h4 {
   color: red;
 }
 
+.shop-page-del-btn {
+  color: white;
+}
 .shop-page-del-btn:hover {
   color: red;
 }

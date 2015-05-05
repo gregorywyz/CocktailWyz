@@ -21,7 +21,7 @@ body {
           <% drinks.forEach(function(drink,idx) { %>
           <tr>
             <td class="text-left fav-result"><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
-            <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-sm"><i class="glyphicon glyphicon-trash"></i></a></td>
+            <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-md"><i class="glyphicon glyphicon-trash"></i></a></td>
           </tr>
           <% }) %>
         </table>
