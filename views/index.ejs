@@ -9,7 +9,7 @@ body {
 
 
 
-<!-- <div class="home-backgrnd"> -->
+
 <div class="home-page container text-center">
 
   <h2>Welcome to The Cocktail Wyz!</h2>
@@ -29,12 +29,14 @@ body {
 
   <p>Search for cocktail recipes here and expand your horizons. Check out what others are having and get creative.</p>
 
-  <div class="pics-div">
+  <div class="pics-div row">
+
     <ul>
     <% pics.forEach(function(pic,idx) { %>
       <li><a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a></li>
     <% }); %>
     </ul>
+
   </div>
 
   <div class="info-row row">
@@ -56,6 +58,6 @@ body {
 
 
 </div>
-<!-- </div> -->
+
 
 <% include partials/footer %>
