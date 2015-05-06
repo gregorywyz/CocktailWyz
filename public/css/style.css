@@ -171,6 +171,37 @@ h4 {
   font-size: 20px;
 }
 
+.home-btn {
+  color: #fff;
+  background-color: transparent;
+  border-color: rgb(131, 229, 131);
+}
+.home-btn:hover {
+  color: rgb(131, 229, 131);
+  background-color: transparent;
+  border-color: rgb(131, 229, 131);
+}
+.add-btn {
+  color: #fff;
+  background-color: transparent;
+  border-color: rgb(131, 229, 131);
+}
+.add-btn:hover {
+  color: rgb(131, 229, 131);
+  background-color: transparent;
+  border-color: rgb(131, 229, 131);
+}
+.del-btn {
+  color: #fff;
+  background-color: transparent;
+  border-color: red;
+}
+.del-btn:hover {
+  color: red;
+  background-color: transparent;
+  border-color: red;
+}
+
 
 /* Header
 ********************************************************************************/
