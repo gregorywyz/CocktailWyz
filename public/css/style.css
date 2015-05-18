@@ -108,6 +108,7 @@ html {
 body {
   font-family: 'PT Sans', Helvetica;
   font-size: 14px;
+  padding-top: 70px;
   /*position: relative;*/
   /*height: 100%;*/
 }
