@@ -343,19 +343,25 @@ h4 {
   white-space:nowrap;
 }
 
-.results-table > p {
+/*.results-table > p {
   margin-top: 40px;
   margin-bottom: 30px;
 }
-
+DELETE BOTH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 .results-table div > table > tbody > tr > td {
   padding-top: 15px;
   padding-bottom: 15px;
   border: none;
-}
+}*/
 
 .search-result {
   font-size: 1.8em;
+}
+
+.ul-results {
+  background: rgba(102,0,102,0.6);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 
