@@ -15,25 +15,23 @@ var app = express();
 
 
 // ~~~ setup express ~~~
-app.set("view engine", "ejs");  // tell express to use .ejs files
-app.use(express.static(__dirname + "/public"));  // tell express where static assets are to be served
+app.set("view engine", "ejs");  // use .ejs files
+app.use(express.static(__dirname + "/public"));  // use static pages
 app.use(bodyParser.urlencoded({extended: false}));  // use body-parser
 app.use(flash());
+
 app.use(session({
   secret:'Roger Rabbit',
   resave: false,
   saveUninitialized: true
 }));
 
-
-
-
 // custom middleware checks which user is logged in
 app.use(function(req,res,next) {
 
-  // req.session.user = {  // auto login for user
-  //   id: 3
-  // }
+  req.session.user = {  // auto login for user
+    id: 3
+  }
 
   req.getUser = function() {
     return req.session.user || false;
@@ -51,7 +49,7 @@ app.use(function(req,res,next){
   res.locals.alerts=req.flash();
 
   next(); // triggers next middleware
-})
+});
 
 Instagram.set('client_id', process.env.IG_ID);
 Instagram.set('client_secret', process.env.IG_SECRET);
@@ -60,7 +58,6 @@ Instagram.set('client_secret', process.env.IG_SECRET);
 // app.use(function(req, res, next){
 //     res.status(404).send('no no no');
 // });
-
 
 
 // ~~~ use controllers ~~~
@@ -73,7 +70,6 @@ app.use('/auth', authCtrl);
 // render home page
 app.get('/', function(req,res) {
   var user = req.getUser();
-
   var locals = {};
   locals.user = user;
 
@@ -82,9 +78,6 @@ app.get('/', function(req,res) {
     name: instaArray[Math.floor(Math.random() * (instaArray.length))] ,
     complete: function(data){
       locals.pics = data;
-      console.log('~~~~~~~~~~~~~~length',data.length); // LOG
-      // res.send(locals);
-      // res.send(res.status(404))
       res.render('index',locals);
     }
   });
@@ -109,7 +102,6 @@ app.use(function(req,res,next) {
 // });
 
 
-// set server to listen for
 app.listen(process.env.PORT || 3000, function() {
   console.log("~~~~~~~~~~ Server started on port 3000 ~~~~~~~~~~");
 });

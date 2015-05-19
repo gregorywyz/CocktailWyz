@@ -8,11 +8,11 @@ body {
 </style>
 
 <!-- <div class="favs-backgrnd"> -->
-<div class="favs-page container text-center">
+<div class="main-content container text-center">
   <h2>Best Cocktails</h2>
 
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 text">
         <table class="table favs-table">
           <tr>
             <th class="text-left">Drink</th>
@@ -21,7 +21,7 @@ body {
           <% drinks.forEach(function(drink,idx) { %>
           <tr>
             <td class="text-left fav-result"><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
-            <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-sm"><i class="glyphicon glyphicon-trash"></i></a></td>
+            <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-md"><i class="glyphicon glyphicon-trash"></i></a></td>
           </tr>
           <% }) %>
         </table>

@@ -9,14 +9,14 @@ body {
 
 
 <!-- <div class="shop-backgrnd"> -->
-<div class="shop-page container text-center">
+<div class="main-content container text-center">
   <h2>Shopping List</h2>
 
-  <div class="shopping-list">
+  <div class="shopping-list text-left">
     <ul>
     <% for (key in groupedIngredients) { %>
       <li>
-        <h4><a href="/search/drink/<%= groupedIngredients[key][0].RecipeID %>"><%= groupedIngredients[key][0].Title %></a>&nbsp;&nbsp;<a href="/shopping/<%= groupedIngredients[key][0].RecipeID %>" class="shop-page-del-btn"><i class="glyphicon glyphicon-trash"></i></a></h4>
+        <h4><a href="/search/drink/<%= groupedIngredients[key][0].RecipeID %>"><%= groupedIngredients[key][0].Title %></a>&nbsp;&nbsp;<a href="/shopping/<%= groupedIngredients[key][0].RecipeID %>" class="shop-page-del-btn btn btn-md"><i class="glyphicon glyphicon-remove"></i></a></h4>
         <hr>
         <% for (var i = 0; i < groupedIngredients[key].length; i++) { %>
           <p><%= groupedIngredients[key][i].Name %></p>
