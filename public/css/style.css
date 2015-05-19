@@ -107,8 +107,9 @@ body {
 }
 
 #el-div-grande {
+  margin-bottom: 70px;
   /*height: 100%;*/
-  min-height: 1000px;
+  /*min-height: 1000px;*/
 }
 
 /*.home-page,
@@ -127,7 +128,7 @@ body {
 }*/
 
 .main-content {
-  min-height: 1000px;
+  /*min-height: 1000px;*/
 }
 
 a:hover {
