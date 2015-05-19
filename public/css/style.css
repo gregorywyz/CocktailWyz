@@ -71,15 +71,8 @@ h4 {
   color: #fff;
 }
 
-.home-page,
-.auth-page,
-.results-page,
-.show-page,
-.favs-page,
-.shop-page,
-.contact-page,
-.about-page {
-    background: rgba(0,0,0,.8);
+.main-content {
+  background: rgba(0,0,0,.8);
 }
 
 .pics-home {
@@ -118,7 +111,7 @@ body {
   min-height: 1000px;
 }
 
-.home-page,
+/*.home-page,
 .auth-page,
 .results-page,
 .show-page,
@@ -126,22 +119,16 @@ body {
 .shop-page,
 .contact-page,
 .about-page {
-    /*padding-bottom: 40px;*/
-    /*padding-top: 105px;*/
-    min-height: 1000px;
-    /*width: 95%;*/
-    /*max-width: 950px;*/
-}
-
-
-
-/*.home-backgrnd,
-.results-backgrnd,
-.show-backgrnd,
-.favs-backgrnd,
-.shop-backgrnd {
-
+  padding-bottom: 40px;
+  padding-top: 105px;
+  min-height: 900px;
+  width: 95%;
+  max-width: 950px;
 }*/
+
+.main-content {
+  min-height: 1000px;
+}
 
 a:hover {
   text-decoration: none;
@@ -343,17 +330,6 @@ h4 {
   white-space:nowrap;
 }
 
-/*.results-table > p {
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-DELETE BOTH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-.results-table div > table > tbody > tr > td {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border: none;
-}*/
-
 .search-result {
   font-size: 1.8em;
 }
@@ -401,7 +377,8 @@ DELETE BOTH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }*/
 
 .favs-table {
-  margin-top: 40px;
+  margin: 40px auto 0;
+  max-width: 500px;
 }
 
 .favs-table > tbody > tr > th {
