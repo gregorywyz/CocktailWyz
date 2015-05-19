@@ -6,15 +6,11 @@ var Instagram = require('instagram-node-lib');
 var router = express.Router();
 
 
-
 // READ - render results page with results from API
 router.get('/results', function(req,res) {
   var user = req.getUser();
   var drinkList = [];
   var query = req.query.q;  // search text from form
-  if (!query) {
-    req.flash('danger','Please enter a search term.');
-  }; // for blank search term
 
   // BigOven API route for recipes search
   var bigOvenUrl = 'http://api.bigoven.com/recipes';
