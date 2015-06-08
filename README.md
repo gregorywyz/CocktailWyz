@@ -1,5 +1,5 @@
 # Cocktail Wyz
-General Assembly Prject #1
+General Assembly Project #1
 
 # Description
 CocktailWyz is a search and find app for drink recipes. The app also has a social photo sharing feed to provide some inspiration and add to the enjoyment of the users. Basic usage involves searching for a drink and recieving a list of drinks from the API. All drinks then link to a page that describes them and offers the recipe. Additionally, users can securely sign up and have the options of creating a shopping list or favorites list. Users can add and delete items to both lists as desired.
@@ -8,7 +8,7 @@ CocktailWyz is a search and find app for drink recipes. The app also has a socia
 CocktailWyz is a web app built by Greg Wyszynski to project specs from General Assembly as a required deliverable for the Web Development Immersive Course. The project showcases skills learned over a few short weeks that started with learning Javascript fundamentals all the way to deploying a live app.
 
 # Technology
-Built on the Node.js platform using a PostgreSQL database system and deployed on Heroku. AJAX was used to perform CRUD actions without the need of refreshing the page. RESTful routing and MVC were also encorporated into the project. The Bootstrap css framework was then used for styling.
+Built on the Node.js platform using a PostgreSQL database system and deployed on Heroku. AJAX was used to perform CRUD actions without the need of refreshing the page. RESTful routing and MVC were also incorporated into the project. The Bootstrap css framework was then used for styling.
 
 Modules used include: Express, EJS, bcrypt, request, lodash, and async.
 
