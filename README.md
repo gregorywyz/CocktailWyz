@@ -8,7 +8,7 @@ CocktailWyz is a search and find app for drink recipes. The app also has a socia
 CocktailWyz is a web app built by Greg Wyszynski to project specs from General Assembly as a required deliverable for the Web Development Immersive Course. The project showcases skills learned over a few short weeks that started with learning Javascript fundamentals all the way to deploying a live app.
 
 # Technology
-Built on the Node.js platform using a PostgreSQL database system and deployed on Heroku. AJAX was used to perform CRUD actions without the need of refreshing the page. RESTful routing and MVC were also encorporated into the project.
+Built on the Node.js platform using a PostgreSQL database system and deployed on Heroku. AJAX was used to perform CRUD actions without the need of refreshing the page. RESTful routing and MVC were also encorporated into the project. The Bootstrap css framework was then used for styling.
 
 Modules used include: Express, EJS, bcrypt, request, lodash, and async.
 
