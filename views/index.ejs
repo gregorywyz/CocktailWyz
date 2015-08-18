@@ -1,5 +1,3 @@
-<% include partials/header %>
-
 <style>
 body {
   background: url('/images/bkgrnd1.jpg') no-repeat center center fixed;
@@ -7,7 +5,7 @@ body {
 }
 </style>
 
-
+<% include partials/header %>
 
 
 <div class="main-content container text-center">
@@ -43,20 +41,22 @@ body {
     <div class="col-xs-12 col-sm-6">
       <h3>Shop</h3>
       <p>Build a shopping list to store the ingredients of a number of drinks. Never forget an ingredient while shopping again! Simply search for a cocktail and add it to your shopping list. </p>
-      <button type="button" class="home-btn btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Must Log In</button>
+      <% if (!user) { %>
+        <button type="button" class="home-btn btn btn-primary btn-sm" data-toggle="modal" data-target="#loginModal">Must Log In</button>
+      <% } else { %>
+        <a href="/shopping"><button type="button" class="home-btn btn btn-primary btn-sm" data-toggle="modal">Go To List</button></a>
+      <% } %>
     </div>
     <div class="col-xs-12 col-sm-6">
       <h3>Favorites</h3>
       <p>Keep track of what you like on your favorites list. Always have a quick refernces to any amazing recipe you fancy. Simply search for a cocktail and add it to your favorites.</p>
-      <button type="button" class="home-btn btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Must Log In</button>
+      <% if (!user) { %>
+        <button type="button" class="home-btn btn btn-primary btn-sm" data-toggle="modal" data-target="#loginModal">Must Log In</button>
+      <% } else { %>
+        <a href="/favorites"><button type="button" class="home-btn btn btn-primary btn-sm" data-toggle="modal">Go To Favs</button></a>
+      <% } %>
     </div>
   </div>
-
-
-
-
-
-
 </div>
 
 
