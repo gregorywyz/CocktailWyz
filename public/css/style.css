@@ -198,11 +198,35 @@ h4 {
   right: 5px;
 }
 
+/* adjustment to center modal */
+#loginModal {
+  padding-left: 15px;
+}
+
+ul.nav.navbar-nav.navbar-right li {
+    text-align: center;
+}
+
+.login-btn {
+  margin-top: 0px;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .login-btn {
+    margin-top: 8px;
+  }
+}
+
 #main-logo {
   height: 40px;
   padding: 3px;
   border-radius: 3px;
   margin: 5px 0 5px 15px;
+}
+
+ul.nav.navbar-nav.navbar-right {
+    margin-right: 15px;
 }
 
 .navbar-text {
@@ -242,6 +266,11 @@ h4 {
   margin: 15px 10px 0;
 }
 
+/* adjustment to center modal */
+#aboutModal,
+#contactModal {
+  padding-left: 15px;
+}
 
 /* Home Page
 ********************************************************************************/
