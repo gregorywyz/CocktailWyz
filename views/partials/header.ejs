@@ -61,33 +61,33 @@
     </div><!-- /.navbar-collapse -->
   </nav>
 
-<div id="el-div-grande" class="container">
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content login-modal">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+          <h4 class="modal-title" id="loginModalLabel">Sign in, or become a member now!</h4>
+        </div>
+        <div class="modal-body">
 
-<% include ../partials/alerts.ejs %>
+              <form class="login-modal form" method="post" action="/auth/login">
+                  <label>Email</label>
+                  <input type="email" class="form-control" placeholder="Enter your e-mail" name="email">
+                  <br><br>
+                  <label>Password</label>
+                  <input type="password" class="form-control" placeholder="Choose a password" name="password">
+                  <br><br>
+                  <input type="submit" value="Log In" class="btn btn-primary">
+                  <button type="button" class="btn btn-info"><a href="/auth/signup">Sign Up</a></button>
+              </form>
 
-<!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content login-modal">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
-        <h4 class="modal-title" id="loginModalLabel">Sign in, or become a member now!</h4>
-      </div>
-      <div class="modal-body">
-
-            <form class="login-modal form" method="post" action="/auth/login">
-                <label>Email</label>
-                <input type="email" class="form-control" placeholder="Enter your e-mail" name="email">
-                <br><br>
-                <label>Password</label>
-                <input type="password" class="form-control" placeholder="Choose a password" name="password">
-                <br><br>
-                <input type="submit" value="Log In" class="btn btn-primary">
-                <button type="button" class="btn btn-info"><a href="/auth/signup">Sign Up</a></button>
-            </form>
-
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div id="el-div-grande" class="container">
+
+  <% include ../partials/alerts.ejs %>
+
 
