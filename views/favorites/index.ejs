@@ -1,5 +1,3 @@
-<% include ../partials/header %>
-
 <style>
 body {
   background: url('/images/bkgrnd4.jpg') no-repeat center center fixed;
@@ -7,29 +5,40 @@ body {
 }
 </style>
 
-<!-- <div class="favs-backgrnd"> -->
-<div class="main-content container text-center">
-  <h2>Best Cocktails</h2>
+<% include ../partials/header %>
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2 text">
-        <table class="table favs-table">
-          <tr>
-            <th class="text-left">Drink</th>
-            <th class="text-center">Remove?</th>
-          </tr>
-          <% drinks.forEach(function(drink,idx) { %>
-          <tr>
-            <td class="text-left fav-result"><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
-            <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-md"><i class="glyphicon glyphicon-trash"></i></a></td>
-          </tr>
-          <% }) %>
-        </table>
+
+<div class="main-content text-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Best Cocktails</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <table class="table favs-table">
+            <tr>
+              <th class="text-left">Drink</th>
+              <th class="text-center">Remove?</th>
+            </tr>
+            <% drinks.forEach(function(drink,idx) { %>
+            <tr>
+              <td class="text-left fav-result"><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></td>
+              <td><a href="/favorites/<%= drink.RecipeID %>" class="favs-page-del-btn btn btn-md"><i class="glyphicon glyphicon-trash"></i></a></td>
+            </tr>
+            <% }) %>
+          </table>
+      </div>
     </div>
   </div>
 
 </div>
-<!-- </div> -->
+
 
 <% include ../partials/footer %>
 
