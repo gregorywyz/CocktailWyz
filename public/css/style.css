@@ -361,6 +361,7 @@ ul.nav.navbar-nav.navbar-right li {
   background: rgba(102,0,102,0.6);
   padding: 10px;
   border-radius: 10px;
+  overflow-x: auto;
 }
 
 
