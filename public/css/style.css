@@ -216,6 +216,10 @@ ul.nav.navbar-nav.navbar-right li {
   .login-btn {
     margin-top: 8px;
   }
+
+  ul.nav.navbar-nav.navbar-right {
+      margin-right: 15px;
+  }
 }
 
 #main-logo {
@@ -223,10 +227,6 @@ ul.nav.navbar-nav.navbar-right li {
   padding: 3px;
   border-radius: 3px;
   margin: 5px 0 5px 15px;
-}
-
-ul.nav.navbar-nav.navbar-right {
-    margin-right: 15px;
 }
 
 .navbar-text {
