@@ -8,12 +8,18 @@ body {
 <% include partials/header %>
 
 
-<div class="main-content container text-center">
+<div class="main-content text-center">
 
-  <h2>Welcome to The Cocktail Wyz!</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Welcome to The Cocktail Wyz!</h2>
+      <h3>Get inspired, get drunk.</h3>
+    </div>
+  </div>
+</div>
 
-  <h3>Get inspired, get drunk.</h3>
-
+<div class="container">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">
       <form action="/search/results" method="GET">
@@ -24,19 +30,29 @@ body {
       </form>
     </div>
   </div>
+</div>
 
-  <p class="search-p">Search for cocktail recipes here and expand your horizons. Check out what others are having and get creative.</p>
-
-  <div class="pics-div row">
-
-    <ul>
-    <% pics.forEach(function(pic,idx) { %>
-      <li><a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a></li>
-    <% }); %>
-    </ul>
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="search-p">Search for cocktail recipes here and expand your horizons. Check out what others are having and get creative.</p>
+    </div>
   </div>
+</div>
 
+<div class="container">
+  <div class="pics-div row">
+    <div class="col-xs-12">
+      <ul>
+      <% pics.forEach(function(pic,idx) { %>
+        <li><a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a></li>
+      <% }); %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
   <div class="info-row row">
     <div class="col-xs-12 col-sm-6">
       <h3>Shop</h3>
@@ -57,6 +73,8 @@ body {
       <% } %>
     </div>
   </div>
+</div>
+
 </div>
 
 

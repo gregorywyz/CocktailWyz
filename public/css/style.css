@@ -99,8 +99,38 @@ body {
 
 #el-div-grande {
   margin-bottom: 70px;
+  margin-left: 15px;
+  margin-right: 15px;
   height: 100vh;
 }
+
+/*
+* Media Queries to work with bootstraps fixed width containers
+******************************************/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  #el-div-grande {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  #el-div-grande {
+    max-width: 970px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  #el-div-grande {
+    max-width: 1170px;
+  }
+}
+
 
 .main-content {
   margin-bottom: 70px;
