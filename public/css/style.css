@@ -91,7 +91,7 @@ body {
   font-family: 'PT Sans', Helvetica;
   font-size: 14px;
   padding-top: 70px;
-  height: 100%;
+  /*height: 100%;*/
 }
 
 #el-div-grande {
@@ -268,6 +268,8 @@ ul.nav.navbar-nav.navbar-right li {
   height:50px;
   width:100%;
   margin-top: 40px;
+  position: relative;
+  clear: both;
 }
 
 .the-footer > ul > li {
