@@ -21,7 +21,6 @@ body {
 
   <div class="btn-row container <%= user ? '' : ' hidden' %>">
     <div class="row">
-      <!-- FAVORITES BTN -->
       <div class="col-sm-offset-2 col-sm-4">
         <!-- Remove from favorites -->
         <form class="favs-del-btn show-btn btn form <%= fav ? '' : ' hidden' %>" action="/favorites/<%= RecipeID %>">
@@ -34,7 +33,6 @@ body {
           <button type="submit" class="add-btn btn btn-primary btn-md"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Favorites</strong></i></button>
         </form>
       </div>
-      <!-- SHOPPING BTN -->
       <div class="col-sm-4">
         <!-- Remove from shopping -->
         <form class="shop-del-btn show-btn form <%= shop ? '' : ' hidden' %>" action="/shopping/<%= RecipeID %>">
@@ -56,7 +54,6 @@ body {
     <div class="row text-left show-details">
       <div class="col-sm-6">
         <h4>Ingredients</h4>
-
         <table class="table ingredients-table">
           <% Ingredients.forEach(function(ingredient) { %>
           <tr>
