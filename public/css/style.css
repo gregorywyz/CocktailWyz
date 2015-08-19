@@ -265,16 +265,33 @@ ul.nav.navbar-nav.navbar-right li {
 ********************************************************************************/
 
 .the-footer {
-  height:50px;
+  min-height:50px;
   width:100%;
   margin-top: 40px;
   position: relative;
   clear: both;
 }
 
+.the-footer > ul {
+  margin: 0;
+  padding: 15px 0;
+}
+
 .the-footer > ul > li {
-  display: inline-block;
-  margin: 15px 10px 0;
+  margin: 15px 0;
+  padding: 5px;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .the-footer > ul > li {
+    display: inline-block;
+    padding: 5px 15px;
+  }
+  .the-footer > ul > li:nth-child(2) {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+  }
 }
 
 .the-footer a {
