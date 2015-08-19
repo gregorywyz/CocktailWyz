@@ -1,5 +1,3 @@
-<% include ../partials/header %>
-
 <style>
 body {
   background: url('/images/bkgrnd2.jpg') no-repeat center center fixed;
@@ -7,32 +5,45 @@ body {
 }
 </style>
 
-<!-- <div class="results-backgrnd"> -->
-<div class="main-content container text-center">
-  <h2>Pick Your Poison</h2>
-  <p><%= Results.length %>&nbsp;Results:</p>
-  <div class="results-table row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+<% include ../partials/header %>
 
-        <ul class="ul-results">
-          <% Results.forEach(function(drink,idx) { %>
-            <li class="search-result"><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></li>
-          <% }) %>
-        </ul>
 
+<div class="main-content text-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Pick Your Poison</h2>
+        <p><%= Results.length %>&nbsp;Results:</p>
+      </div>
     </div>
   </div>
 
-   <div class="pics-div row">
-    <ul>
-    <% pics.forEach(function(pic,idx) { %>
-      <li><a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a></li>
-    <% }); %>
-    </ul>
+  <div class="container">
+    <div class="results-table row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <ul class="ul-results">
+            <% Results.forEach(function(drink,idx) { %>
+              <li class="search-result"><a href="/search/drink/<%= drink.RecipeID %>"><%= drink.Title %></a></li>
+            <% }) %>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="pics-div row">
+      <div class="col-xs-12">
+        <ul>
+        <% pics.forEach(function(pic,idx) { %>
+          <li><a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a></li>
+        <% }); %>
+        </ul>
+      </div>
+    </div>
   </div>
 
 </div>
-<!-- </div> -->
 
 
 <% include ../partials/footer %>
