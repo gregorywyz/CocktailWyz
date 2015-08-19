@@ -413,15 +413,6 @@ ul.nav.navbar-nav.navbar-right li {
 /* Shopping List Page
 ********************************************************************************/
 
-.shopping-list {
-  margin: 20px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space:nowrap;
-}
-
 .shopping-list li {
   margin: 20px;
-  display:inline-block;
-  vertical-align: text-top;
 }
