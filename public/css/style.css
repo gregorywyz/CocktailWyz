@@ -199,6 +199,14 @@ h4 {
   background-color: transparent;
   border-color: red;
 }
+.btn-close {
+  color: #fff;
+  background-color: transparent;
+  border-color: #FF9966;
+}
+.btn-close:hover {
+  color: #FF9966;
+}
 
 
 /* Header
@@ -349,12 +357,6 @@ ul.nav.navbar-nav.navbar-right li {
 }
 
 
-
-/* Login Pages
-********************************************************************************/
-
-
-
 /* Search Results Page
 ********************************************************************************/
 
@@ -429,4 +431,26 @@ ul.nav.navbar-nav.navbar-right li {
 
 .shopping-list li {
   margin: 20px;
+}
+
+
+/* About Modal
+********************************************************************************/
+
+.headshot {
+  width: 50%;
+  max-width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+.contact-links {
+  margin-top: 20px;
+}
+
+.contact-links>li {
+  display: inline-block;
+  font-size: 50px;
+  margin: 0 20px;
 }
