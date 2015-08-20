@@ -301,17 +301,18 @@ ul.nav.navbar-nav.navbar-right li {
     border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
   }
+
+  /* adjustment to center modal */
+  #aboutModal,
+  #contactModal {
+    padding-left: 15px;
+  }
 }
 
 .the-footer a {
   cursor: pointer;
 }
 
-/* adjustment to center modal */
-#aboutModal,
-#contactModal {
-  padding-left: 15px;
-}
 
 /* Home Page
 ********************************************************************************/
