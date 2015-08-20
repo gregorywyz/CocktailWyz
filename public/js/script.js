@@ -4,6 +4,130 @@ $(function() {
 
 
 
+  /*  CLIENT SIDE FORM VALIDATIONS
+  ***************************************************************************/
+
+  // Cocktail search form
+  $('#drink-form').on('submit', function(e) {
+    $('.form-msg').remove();
+    if ($('#drink-query').val() === '') {
+      e.preventDefault();
+      $('#drink-query').after('<p class="form-msg">* You must actually type something</p>');
+    }
+  });
+
+  // New user sign up form
+  $('#signup-form').on('submit', function(e) {
+
+    // clear any error messages
+    $('.form-highlight').removeClass('form-highlight');
+    $('.form-msg').remove();
+
+    // collect form fields
+    var email = $('#email');
+    var name = $('#name');
+    var password = $('#password');
+    var pswdConfrm = $('#confirm-password');
+
+    // ensure fields are properly entered or prevent submission
+    if (email.val() === '') {
+      e.preventDefault();
+      email.addClass('form-highlight');
+      email.after('<p class="form-msg">* This is a required field</p>');
+    };
+
+    if (name.val() === '') {
+      e.preventDefault();
+      name.addClass('form-highlight');
+      name.after('<p class="form-msg">* This is a required field</p>');
+    };
+
+    if (password.val() === '') {
+      e.preventDefault();
+      password.addClass('form-highlight');
+      password.after('<p class="form-msg">* This is a required field</p>');
+    };
+
+    if (pswdConfrm.val() === '') {
+      e.preventDefault();
+      pswdConfrm.addClass('form-highlight');
+      pswdConfrm.after('<p class="form-msg">* This is a required field</p>');
+    };
+
+    if (password.val().length < 4 || password.val().length > 20) {
+      e.preventDefault();
+      password.addClass('form-highlight');
+      password.after('<p class="form-msg">* Password must be between 4 and 20 characters long</p>');
+    };
+
+    if (password.val() !== pswdConfrm.val()) {
+      e.preventDefault();
+      password.addClass('form-highlight');
+      pswdConfrm.addClass('form-highlight');
+      pswdConfrm.after('<p class="form-msg">* Your passwords did not match</p>');
+    };
+  });
+
+  // Modal login form
+  $('#login-form-m').on('submit', function(e) {
+
+    $('.form-highlight').removeClass('form-highlight');
+    $('.form-msg').remove();
+
+    var email = $('#email-m');
+    var password = $('#password-m');
+
+    if (email.val() === '') {
+      e.preventDefault();
+      $('#loginModal').modal('show'); // keeps modal from closing
+      email.addClass('form-highlight');
+      email.after('<p class="form-msg" style="color:#FDDE3F;">* This is a required field</p>');
+    };
+
+    if (password.val() === '') {
+      e.preventDefault();
+      $('#loginModal').modal('show');
+      password.addClass('form-highlight');
+      password.after('<p class="form-msg" style="color:#FDDE3F;">* This is a required field</p>');
+    };
+
+    if (password.val().length < 4 || password.val().length > 20) {
+      e.preventDefault();
+      $('#loginModal').modal('show');
+      password.addClass('form-highlight');
+      password.after('<p class="form-msg" style="color:#FDDE3F;">* Password must be between 4 and 20 characters long</p>');
+    };
+  });
+
+  // Standard login form
+  $('#login-form').on('submit', function(e) {
+
+    $('.form-highlight').removeClass('form-highlight');
+    $('.form-msg').remove();
+
+    var email = $('#email');
+    var password = $('#password');
+
+    if (email.val() === '') {
+      e.preventDefault();
+      email.addClass('form-highlight');
+      email.after('<p class="form-msg">* This is a required field</p>');
+    };
+
+    if (password.val() === '') {
+      e.preventDefault();
+      password.addClass('form-highlight');
+      password.after('<p class="form-msg">* This is a required field</p>');
+    };
+
+    if (password.val().length < 4 || password.val().length > 20) {
+      e.preventDefault();
+      password.addClass('form-highlight');
+      password.after('<p class="form-msg">* Password must be between 4 and 20 characters long</p>');
+    };
+  });
+
+
   /*  ASYNC ADD BUTTON HERE
   ***************************************************************************/
 
@@ -136,10 +260,6 @@ $(function() {
       });
     };
   });
-
-
-
-
 
 }); // END OF DOC READY
 

@@ -22,12 +22,12 @@ body {
     <div class="row">
       <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6 text-left">
         <hr>
-        <form class="form" method="post" action="/auth/login">
+        <form id="login-form" class="form" method="post" action="/auth/login">
           <label>Email</label>
-          <input type="email" class="form-control" placeholder="Enter your e-mail" name="email">
+          <input type="email" id="email" class="form-control" placeholder="Enter your e-mail" name="email">
           <br><br>
           <label>Password</label>
-          <input type="password" class="form-control" placeholder="Enter your password" name="password">
+          <input type="password" id="password" class="form-control" placeholder="Enter your password" name="password">
           <br><br>
           <div class="text-center">
             <input type="submit" value="Log In" class="btn btn-primary">

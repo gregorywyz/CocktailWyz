@@ -208,6 +208,13 @@ h4 {
   color: #FF9966;
 }
 
+.form-highlight {
+  border: 3px solid #ff0000;
+}
+.form-msg {
+  margin-top: 10px;
+  color: #83E583;
+}
 
 /* Header
 ********************************************************************************/
