@@ -215,10 +215,6 @@ h4 {
   right: 5px;
 }
 
-/* adjustment to center modal */
-#loginModal {
-  padding-left: 15px;
-}
 
 ul.nav.navbar-nav.navbar-right li {
     text-align: center;
@@ -236,6 +232,11 @@ ul.nav.navbar-nav.navbar-right li {
 
   ul.nav.navbar-nav.navbar-right {
       margin-right: 15px;
+  }
+
+  /* adjustment to center modal */
+  #loginModal {
+    padding-left: 15px;
   }
 }
 
