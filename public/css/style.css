@@ -337,13 +337,26 @@ ul.nav.navbar-nav.navbar-right li {
 }
 
 .pics-home {
-  max-height: 200px;
-  margin: 10px;
+  /*max-height: 200px;*/
+  /*margin: 10px;*/
+  height: 200px;
+  margin: 10px 10px 0;
   border-radius: 10px;
 }
 
-.pics-div {
-  /*height: 300px;*/
+/* Slick overrides */
+.slick-list.draggable {
+  height: 220px;
+}
+.pics-home {
+}
+.slick-slide {
+  width: auto;
+  margin: 0 auto;
+}
+
+/* remove when slick is tested */
+/*.pics-div {
   margin: 20px 5px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -353,7 +366,7 @@ ul.nav.navbar-nav.navbar-right li {
 .pics-div li{
   display:inline-block;
   white-space: normal;
-}
+}*/
 
 .info-row {
   margin-bottom: 30px;
@@ -462,16 +475,6 @@ ul.nav.navbar-nav.navbar-right li {
   margin: 0 20px;
 }
 
-.slick-list.draggable {
-    height: 220px;
-}
-.pics-home {
-    height: 200px;
-    margin: 10px 10px 0;
-}
-.slick-slide {
-  width: auto;
-  margin: 0 auto;
-}
+
 
 

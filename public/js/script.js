@@ -261,16 +261,14 @@ $(function() {
     };
   });
 
-$('.slick-swiper').slick({
-  centerMode: true,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  variableWidth: true,
-
-
-
-});
+  // Slick swiper for Instagram pics
+  $('.slick-swiper').slick({
+    centerMode: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+  });
 
 }); // END OF DOC READY
 

@@ -38,7 +38,8 @@ body {
     </div>
   </div>
 </div>
-<!--
+
+<!-- REMOVE when slick is tested
 <div class="container">
   <div class="pics-div row">
     <div class="col-xs-12">
@@ -53,13 +54,13 @@ body {
  -->
 
 <div class="container">
-<div class="slick-swiper">
-  <% pics.forEach(function(pic,idx) { %>
-    <div>
-      <a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a>
-    </div>
-  <% }); %>
-</div>
+  <div class="slick-swiper">
+    <% pics.forEach(function(pic,idx) { %>
+      <div>
+        <a href="<%= pic.link %>" target="_blank"><img class="pics-home" src="<%= pic.images.standard_resolution.url %>"></a>
+      </div>
+    <% }); %>
+  </div>
 </div>
 
 <div class="container">
