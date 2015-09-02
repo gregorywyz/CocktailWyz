@@ -461,3 +461,17 @@ ul.nav.navbar-nav.navbar-right li {
   font-size: 50px;
   margin: 0 20px;
 }
+
+.slick-list.draggable {
+    height: 220px;
+}
+.pics-home {
+    height: 200px;
+    margin: 10px 10px 0;
+}
+.slick-slide {
+  width: auto;
+  margin: 0 auto;
+}
+
+
