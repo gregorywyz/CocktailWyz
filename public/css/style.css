@@ -288,13 +288,49 @@ h4 {
   right: 5px;
 }
 
-
 ul.nav.navbar-nav.navbar-right li {
     text-align: center;
 }
 
 .login-btn {
   margin-top: 0;
+}
+
+.btn-login {
+  color: #FF9966;
+  background-color: transparent;
+  border-color: #FF9966;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn-login:focus,
+.btn-login:hover {
+  background-color: #660066;
+  background-color: rgba(102,0,102,0.6);
+  color: #FF9966;
+}
+
+.btn-signup {
+  color: #CCFFFF;
+  background-color: transparent;
+  border-color: #CCFFFF;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn-signup:focus,
+.btn-signup:hover {
+  background-color: #660066;
+  background-color: rgba(102,0,102,0.6);
+  color: #CCFFFF;
+}
+
+.lft-rht-padding {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* Small Devices, Tablets */
