@@ -5,6 +5,20 @@ $(function() {
       $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
   });
 
+  // initialize tooltips
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
+  // Slick swiper for Instagram pics
+  $('.slick-swiper').slick({
+    centerMode: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+  });
+
   /*  CLIENT SIDE FORM VALIDATIONS
   ***************************************************************************/
 
@@ -127,6 +141,7 @@ $(function() {
       password.after('<p class="form-msg">* Password must be between 4 and 20 characters long</p>');
     };
   });
+  // END CLIENT SIDE FORM VALIDATIONS
 
 
   /*  ASYNC ADD BUTTON HERE
@@ -184,7 +199,7 @@ $(function() {
       $('.shop-del-btn').removeClass('hidden');
     });
   });
-
+  // END ADD BUTTON
 
   /*  ASYNC DELETE BUTTON HERE
   ***************************************************************************/
@@ -261,15 +276,7 @@ $(function() {
       });
     };
   });
-
-  // Slick swiper for Instagram pics
-  $('.slick-swiper').slick({
-    centerMode: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    variableWidth: true,
-  });
+  // END DELETE BUTTON
 
 }); // END OF DOC READY
 
