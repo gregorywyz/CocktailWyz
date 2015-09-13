@@ -23,19 +23,19 @@ body {
       <div class="col-sm-offset-2 col-sm-4">
         <!-- Remove from favorites -->
         <form class="favs-del-btn show-btn btn form <%= fav ? '' : ' hidden' %>" action="/favorites/<%= RecipeID %>">
-          <button type="submit" class="del-btn btn btn-danger btn-md"><i class="glyphicon glyphicon-minus">&nbsp;<strong>Favorites</strong></i></button>
+          <button type="submit" class="del-btn btn btn-md"><i class="glyphicon glyphicon-minus">&nbsp;<strong>Favorites</strong></i></button>
         </form>
         <!-- Add to favorites -->
         <form class="favs-add-btn show-btn form <%= fav ? ' hidden' : '' %>" action="/favorites">
           <input type="hidden" name="RecipeID" value="<%= RecipeID %>">
           <input type="hidden" name="Title" value="<%= Title %>">
-          <button type="submit" class="add-btn btn btn-primary btn-md"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Favorites</strong></i></button>
+          <button type="submit" class="add-btn btn btn-md"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Favorites</strong></i></button>
         </form>
       </div>
       <div class="col-sm-4">
         <!-- Remove from shopping -->
         <form class="shop-del-btn show-btn form <%= shop ? '' : ' hidden' %>" action="/shopping/<%= RecipeID %>">
-          <button type="submit" class="del-btn btn btn-danger btn-md"><i class="glyphicon glyphicon-minus">&nbsp;<strong>Shopping List</strong></i></button>
+          <button type="submit" class="del-btn btn btn-md"><i class="glyphicon glyphicon-minus">&nbsp;<strong>Shopping List</strong></i></button>
         </form>
         <!-- Add to shopping -->
         <form class="shop-add-btn show-btn form <%= shop ? ' hidden' : '' %>" action="/shopping" method="POST">
@@ -43,7 +43,7 @@ body {
           <input type="hidden" name="Title" value="<%= Title %>">
           <!-- magic here to pass the ingredients -->
           <input type="hidden" name="Ingredients" value="<%= Ingredients.map(function(i) { return i.Name }).join(", ") %>">
-          <button type="submit" class="add-btn btn btn-primary btn-md"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Shopping List</strong></i></button>
+          <button type="submit" class="add-btn btn btn-md"><i class="glyphicon glyphicon-plus">&nbsp;<strong>Shopping List</strong></i></button>
         </form>
       </div>
     </div>
