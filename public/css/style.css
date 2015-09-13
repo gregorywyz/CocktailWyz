@@ -13,8 +13,13 @@ body {
 
 a {
   color: inherit;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-a:hover {
+a:hover,
+a:focus {
   color: #FF9966;
 }
 
@@ -38,9 +43,22 @@ h4 {
 
 .navbar-default .navbar-nav>li>a {
   color: #fff;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
+.navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
   color: #CCFFFF;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  background-color: transparent;
+  color: #CCFFFF;
+  color: rgb(131, 229, 131);
 }
 
 .the-header {
@@ -72,14 +90,27 @@ h4 {
   border: 2px solid white;
 }
 
-.favs-page-del-btn:hover {
+.favs-page-del-btn {
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.favs-page-del-btn:hover,
+.favs-page-del-btn:focus {
   color: red;
 }
 
 .shop-page-del-btn {
   color: white;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-.shop-page-del-btn:hover {
+.shop-page-del-btn:hover,
+.shop-page-del-btn:focus {
   color: red;
 }
 
@@ -173,8 +204,13 @@ h4 {
   color: #fff;
   background-color: transparent;
   border-color: rgb(131, 229, 131);
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-.home-btn:hover {
+.home-btn:hover,
+.home-btn:focus {
   color: rgb(131, 229, 131);
   background-color: transparent;
   border-color: rgb(131, 229, 131);
@@ -183,8 +219,13 @@ h4 {
   color: #fff;
   background-color: transparent;
   border-color: rgb(131, 229, 131);
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-.add-btn:hover {
+.add-btn:hover,
+.add-btn:focus {
   color: rgb(131, 229, 131);
   background-color: transparent;
   border-color: rgb(131, 229, 131);
@@ -193,8 +234,13 @@ h4 {
   color: #fff;
   background-color: transparent;
   border-color: red;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-.del-btn:hover {
+.del-btn:hover,
+.del-btn:focus {
   color: red;
   background-color: transparent;
   border-color: red;
@@ -203,8 +249,13 @@ h4 {
   color: #fff;
   background-color: transparent;
   border-color: #FF9966;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-.btn-close:hover {
+.btn-close:hover,
+.btn-close:focus {
   color: #FF9966;
 }
 
@@ -246,13 +297,29 @@ ul.nav.navbar-nav.navbar-right li {
   }
 
   ul.nav.navbar-nav.navbar-right {
-      margin-right: 15px;
+    margin-right: 15px;
   }
 
   /* adjustment to center modal */
   #loginModal {
     padding-left: 15px;
   }
+}
+
+.btn-blue {
+  color: #CCFFFF;
+  background-color: transparent;
+  border-color: #CCFFFF;
+  -webkit-transition: 0.3s;
+  -mox-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn-blue:focus,
+.btn-blue:hover {
+  color: #CCFFFF;
+  background-color: rgba(102,0,102,0.6);
+  border-color: #CCFFFF;
 }
 
 #main-logo {

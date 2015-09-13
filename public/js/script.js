@@ -1,8 +1,9 @@
 $(function() {
 
-  console.log('--- document ready ---');
-
-
+  // set font color for active link
+  $(document).ready(function () {
+      $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+  });
 
   /*  CLIENT SIDE FORM VALIDATIONS
   ***************************************************************************/
