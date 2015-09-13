@@ -61,6 +61,14 @@ h4 {
   color: rgb(131, 229, 131);
 }
 
+#logout>a {
+  color: #FF9966;
+}
+#logout>a:hover,
+#logout>a:focus {
+  color: #CCFFFF;
+}
+
 .the-header {
   background: #333;
 }

@@ -42,7 +42,7 @@
         <li class="<%= user ? '' : ' hidden' %>"><a href="/shopping">Shopping List</a></li>
         <li class="<%= user ? '' : ' hidden' %>"><a href="/favorites">Favorites</a></li>
         <li class="<%= user ? 'hidden' : '' %> login-btn"><button type="button" class="btn btn-blue btn-md" data-toggle="modal" data-target="#loginModal">LogIn</button></li>
-        <li class="<%= user ? '' : 'hidden' %>"><a href="/auth/logout">LogOut</a></li>
+        <li class="<%= user ? '' : 'hidden' %>" id="logout"><a href="/auth/logout">LogOut</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </nav>
